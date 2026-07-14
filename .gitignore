@@ -45,3 +45,7 @@ Scripts/*.sparkle-keys-backup.txt
 # ── Dead-link checker local state/report (regenerated) ─────
 Scripts/.dead-link-state.json
 Scripts/dead-links-report.*
+
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.pyc
