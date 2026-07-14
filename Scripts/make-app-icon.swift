@@ -1,10 +1,8 @@
 #!/usr/bin/env swift
-// Generates a neutral placeholder app icon set into the AppIcon.appiconset.
-// A rounded blue-gradient square with the app's initial. Replace with your real
-// artwork before shipping. Usage: ./Scripts/make-app-icon.swift [Letter]
+// Generates the OSINT-index app icon set into the AppIcon.appiconset: a dark
+// navy-to-blue gradient square with a white magnifying glass (SF Symbol),
+// evoking investigation/search. Usage: ./Scripts/make-app-icon.swift
 import AppKit
-
-let letter = CommandLine.arguments.count >= 2 ? String(CommandLine.arguments[1].prefix(1)) : "A"
 
 // Resolve the appiconset next to this script (…/Scripts/../OSINTIndex/Assets…).
 let scriptDir = URL(fileURLWithPath: CommandLine.arguments[0]).deletingLastPathComponent()
@@ -35,21 +33,28 @@ func render(_ size: Int) -> Data {
     let radius = s * 0.22
     let path = NSBezierPath(roundedRect: rect, xRadius: radius, yRadius: radius)
     let gradient = NSGradient(colors: [
-        NSColor(calibratedRed: 0.26, green: 0.55, blue: 0.98, alpha: 1),
-        NSColor(calibratedRed: 0.13, green: 0.36, blue: 0.86, alpha: 1),
+        NSColor(calibratedRed: 0.11, green: 0.19, blue: 0.35, alpha: 1),
+        NSColor(calibratedRed: 0.05, green: 0.09, blue: 0.19, alpha: 1),
     ])!
     gradient.draw(in: path, angle: -90)
 
-    let fontSize = s * 0.55
-    let para = NSMutableParagraphStyle(); para.alignment = .center
-    let attrs: [NSAttributedString.Key: Any] = [
-        .font: NSFont.systemFont(ofSize: fontSize, weight: .bold),
-        .foregroundColor: NSColor.white,
-        .paragraphStyle: para,
-    ]
-    let text = letter.uppercased() as NSString
-    let tsize = text.size(withAttributes: attrs)
-    text.draw(at: NSPoint(x: (s - tsize.width) / 2, y: (s - tsize.height) / 2), withAttributes: attrs)
+    let symbolConfig = NSImage.SymbolConfiguration(pointSize: s * 0.52, weight: .semibold)
+    guard let symbol = NSImage(systemSymbolName: "magnifyingglass", accessibilityDescription: nil)?
+        .withSymbolConfiguration(symbolConfig) else {
+        FileHandle.standardError.write(Data("could not load SF Symbol\n".utf8))
+        exit(1)
+    }
+    let tinted = NSImage(size: symbol.size, flipped: false) { rect in
+        NSColor.white.set()
+        symbol.draw(in: rect)
+        rect.fill(using: .sourceAtop)
+        return true
+    }
+    let symbolRect = NSRect(
+        x: (s - tinted.size.width) / 2,
+        y: (s - tinted.size.height) / 2,
+        width: tinted.size.width, height: tinted.size.height)
+    tinted.draw(in: symbolRect)
 
     NSGraphicsContext.restoreGraphicsState()
     return rep.representation(using: .png, properties: [:])!
@@ -60,4 +65,4 @@ for size in [16, 32, 64, 128, 256, 512, 1024] {
     try! render(size).write(to: url)
     print("wrote \(url.lastPathComponent)")
 }
-print("✅ placeholder icon set generated (letter: \(letter))")
+print("✅ app icon set generated (magnifying glass on navy gradient)")
