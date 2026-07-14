@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-14T20:15:01Z",
+  "generatedAt": "2026-07-14T20:18:36Z",
   "source": {
     "importedFrom": "https://raw.githubusercontent.com/osint4all/osint4all.github.io/main/README.md",
     "importedAt": "2026-07-14T17:50:33Z",
@@ -8346,6 +8346,55 @@
           "url": "https://www.aware-online.com/en/osint-tools/cryptocurrency-tools/",
           "notes": null,
           "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-blockchain-explorer-2",
+          "name": "Blockchain Explorer",
+          "url": "https://www.blockchain.com/explorer?utm_campaign=expnav_explorer",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-coin-market-cap",
+          "name": "Coin Market Cap",
+          "url": "https://coinmarketcap.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-bloxy",
+          "name": "Bloxy",
+          "url": "https://bloxy.info/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-blockchair",
+          "name": "Blockchair",
+          "url": "https://blockchair.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-tokenview",
+          "name": "Tokenview",
+          "url": "https://tokenview.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-walletexplorer",
+          "name": "WalletExplorer",
+          "url": "https://www.walletexplorer.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-elliptic",
+          "name": "Elliptic",
+          "url": "https://www.elliptic.co/",
+          "notes": null,
+          "addedManually": false
         }
       ]
     },
@@ -12677,6 +12726,97 @@
           "id": "news-rss-what-s-osint-hash-values-impeachment-trial-shows-nuances-in-preserving-digital-evidence-rappler7-juil",
           "name": "What's OSINT, hash values? Impeachment trial shows nuances in preserving digital evidence - Rappler7 juil.",
           "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNmVJWDIxNFlqZS1idkhuQVljOW1BSU16Z3hsMDl1azNjUlpGVTZUYVUwdW5qZFp2WW4zcE9kZERkQWhibXVQTG11ZGx3M1hiR042YkFRdjdHLVZrN3JyZGlvV09jR01rSEJnTkhDbWo4U1NpOWdsR0hmVG00dkhNREdLNEFlLU8yMXByNlphWmdPLUlsSERlbDBjTXF3QQ?oc=5",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "sms-services",
+      "name": "SMS Services",
+      "order": 91,
+      "tools": [
+        {
+          "id": "sms-services-receive-sms-free",
+          "name": "Receive-SMS (free)",
+          "url": "https://receive-sms.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "sms-services-receive-sms-free-2",
+          "name": "Receive SMS (free)",
+          "url": "http://sms.sellaite.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "sms-services-receive-sms-online",
+          "name": "Receive SMS Online",
+          "url": "https://www.receivesmsonline.net/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "date-time",
+      "name": "Date & Time",
+      "order": 92,
+      "tools": [
+        {
+          "id": "date-time-suncalc",
+          "name": "SunCalc",
+          "url": "https://suncalc.org/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-world-time",
+          "name": "World time",
+          "url": "https://www.timeanddate.de/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-sonnenverlauf",
+          "name": "Sonnenverlauf",
+          "url": "https://www.sonnenverlauf.de/#/49.495,11.073,5/2017.11.10/12:52/1/0",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-mooncalc",
+          "name": "Mooncalc",
+          "url": "https://www.mondverlauf.de/#/50.9421,6.9582,17/2018.03.06/21:53/1/2",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-time-converter",
+          "name": "Time converter",
+          "url": "https://www.worldtimebuddy.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-shadowcalculator",
+          "name": "ShadowCalculator",
+          "url": "http://shadowcalculator.eu/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-wind",
+          "name": "Wind",
+          "url": "https://www.windy.com/station/wmo-10384?satellite,52.467,13.400,8",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-shade-map",
+          "name": "Shade Map",
+          "url": "https://shademap.app/",
           "notes": null,
           "addedManually": false
         }
