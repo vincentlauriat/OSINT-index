@@ -64,8 +64,10 @@ def check_url(entry, timeout):
 def load_state(state_path):
     if state_path.exists():
         with state_path.open(encoding="utf-8") as f:
-            return json.load(f)
-    return {"next_offset": 0}
+            state = json.load(f)
+            state.setdefault("results", [])
+            return state
+    return {"next_offset": 0, "results": []}
 
 
 def save_state(state_path, state):
@@ -73,15 +75,52 @@ def save_state(state_path, state):
         json.dump(state, f, indent=2)
 
 
+# Status/errors that plausibly mean bot-blocking or transient failure rather than a
+# genuinely dead link — never suggest deleting these without a manual look.
+UNCERTAIN_STATUSES = {403, 429}
+
+
+def classify(r):
+    if r["ok"]:
+        return "ok"
+    status = r.get("status")
+    if status in UNCERTAIN_STATUSES or (status is not None and status >= 500):
+        return "uncertain"
+    if status is not None:
+        return "likely-dead"  # 404 and other clear 4xx
+    error = (r.get("error") or "").lower()
+    if "timed out" in error or "timeout" in error:
+        return "uncertain"
+    return "likely-dead"  # DNS failure, connection refused, etc.
+
+
 def write_report(report_path, results):
-    dead = [r for r in results if not r["ok"]]
+    failing = [r for r in results if not r["ok"]]
+    likely_dead = [r for r in failing if classify(r) == "likely-dead"]
+    uncertain = [r for r in failing if classify(r) == "uncertain"]
+
     lines = [
-        f"# Dead-link report — {len(dead)} of {len(results)} checked URLs failing",
+        f"# Dead-link report — {len(failing)} of {len(results)} checked URLs failing",
+        "",
+        f"- **{len(likely_dead)} likely dead** (404 / DNS failure / clear 4xx) — reasonable cleanup candidates after a manual look.",
+        f"- **{len(uncertain)} uncertain** (403 / 429 / 5xx / timeout) — often bot-blocking or transient, do NOT delete without checking by hand.",
+        "",
+        "## Likely dead",
         "",
         "| Category | Tool | URL | Status |",
         "|---|---|---|---|",
     ]
-    for r in dead:
+    for r in likely_dead:
+        status = r.get("status") if r.get("status") is not None else r.get("error", "?")
+        lines.append(f"| {r['category']} | {r['name']} | {r['url']} | {status} |")
+    lines += [
+        "",
+        "## Uncertain (needs manual check)",
+        "",
+        "| Category | Tool | URL | Status |",
+        "|---|---|---|---|",
+    ]
+    for r in uncertain:
         status = r.get("status") if r.get("status") is not None else r.get("error", "?")
         lines.append(f"| {r['category']} | {r['name']} | {r['url']} | {status} |")
     report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -105,12 +144,13 @@ def main():
     catalog = load_catalog(catalog_path)
     tools = flatten_tools(catalog, category_slug=args.category)
 
-    state = {"next_offset": 0} if args.reset else load_state(state_path)
+    state = {"next_offset": 0, "results": []} if args.reset else load_state(state_path)
     offset = args.offset if args.offset is not None else state["next_offset"]
     batch = tools[offset : offset + args.limit]
 
     if not batch:
         print(f"✓ Nothing left to check (offset {offset} >= {len(tools)} tools). Pass --reset to start over.")
+        write_report(report_path, state["results"])
         return
 
     print(f"Checking {len(batch)} URLs (offset {offset}/{len(tools)}, {args.workers} workers)...")
@@ -118,13 +158,24 @@ def main():
         results = list(pool.map(lambda e: check_url(e, args.timeout), batch))
 
     dead = [r for r in results if not r["ok"]]
-    write_report(report_path, results)
+
+    # Accumulate across runs (keyed by tool id) so the report reflects the whole
+    # catalog swept so far, not just this batch — a plain overwrite would lose
+    # every earlier incremental slice's findings.
+    accumulated = {r["id"]: r for r in state["results"]}
+    for r in results:
+        accumulated[r["id"]] = r
+    all_results = list(accumulated.values())
+    write_report(report_path, all_results)
 
     if not args.category:
         state["next_offset"] = offset + len(batch)
+        state["results"] = all_results
         save_state(state_path, state)
 
+    total_dead = sum(1 for r in all_results if not r["ok"])
     print(f"✓ {len(dead)}/{len(results)} URLs failing in this batch. Report: {report_path}")
+    print(f"  Cumulative: {total_dead}/{len(all_results)} checked so far failing.")
     if not args.category:
         print(f"  Next run resumes at offset {state['next_offset']}/{len(tools)}.")
 
