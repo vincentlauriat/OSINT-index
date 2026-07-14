@@ -8,21 +8,24 @@ enum Strings {
         "fr": [
             "app_name": "OSINT-index",
 
-            // Sidebar / liste
-            "search_placeholder": "Rechercher…",
+            // Sidebar
+            "favorites_title": "Favoris",
+            "categories_title": "Catégories",
+            "search_placeholder": "Rechercher un outil ou une catégorie…",
+            "search_results_title": "Résultats",
             "refresh": "Rafraîchir",
-            "refresh_help": "Recharger la liste",
-            "no_items_title": "Aucun élément",
-            "no_items_desc": "Tire pour rafraîchir ou vérifie ta source de données.",
+            "refresh_help": "Recharger le catalogue",
 
-            // Groupes de dates
-            "group_today": "Aujourd'hui",
-            "group_week": "Cette semaine",
-            "group_earlier": "Plus tôt",
+            // Liste d'outils
+            "no_tools_title": "Aucun outil",
+            "no_tools_desc": "Cette catégorie est vide, ou aucun favori n'est encore enregistré.",
 
             // Sélection vide
-            "empty_title": "Sélectionne un élément",
-            "empty_desc": "Choisis un élément dans la liste pour voir son détail.",
+            "empty_title": "Sélectionne une catégorie",
+            "empty_desc": "Choisis une catégorie dans la barre latérale pour voir ses outils.",
+
+            // Erreurs
+            "catalog_load_error": "Impossible de charger le catalogue (réseau, cache et copie embarquée indisponibles).",
 
             // Réglages
             "settings_title": "Réglages",
@@ -32,13 +35,11 @@ enum Strings {
             "appearance_dark": "Sombre",
             "settings_language": "Langue",
             "language_system": "Système",
-            "settings_apikey": "Clé API",
-            "apikey_placeholder": "Colle ta clé API…",
-            "apikey_help": "Stockée de façon sécurisée dans le Trousseau, jamais en clair.",
-            "apikey_present": "Une clé API est enregistrée.",
-            "apikey_absent": "Aucune clé API enregistrée.",
             "settings_about": "À propos",
-            "settings_about_text": "Généré depuis AppKitTemplate — squelette macOS + iOS SwiftUI.",
+            "settings_about_text": "Un point d'entrée pour faire de l'OSINT — données importées depuis osint4all (CC0).",
+
+            // Menu (macOS)
+            "check_for_updates": "Rechercher les mises à jour…",
 
             // Divers
             "ok": "OK",
@@ -47,18 +48,20 @@ enum Strings {
         "en": [
             "app_name": "OSINT-index",
 
-            "search_placeholder": "Search…",
+            "favorites_title": "Favorites",
+            "categories_title": "Categories",
+            "search_placeholder": "Search a tool or category…",
+            "search_results_title": "Results",
             "refresh": "Refresh",
-            "refresh_help": "Reload the list",
-            "no_items_title": "No items",
-            "no_items_desc": "Pull to refresh or check your data source.",
+            "refresh_help": "Reload the catalog",
 
-            "group_today": "Today",
-            "group_week": "This week",
-            "group_earlier": "Earlier",
+            "no_tools_title": "No tools",
+            "no_tools_desc": "This category is empty, or no favorites are saved yet.",
 
-            "empty_title": "Select an item",
-            "empty_desc": "Pick an item from the list to see its detail.",
+            "empty_title": "Select a category",
+            "empty_desc": "Pick a category from the sidebar to see its tools.",
+
+            "catalog_load_error": "Couldn't load the catalog (network, cache, and bundled copy all unavailable).",
 
             "settings_title": "Settings",
             "settings_appearance": "Appearance",
@@ -67,13 +70,10 @@ enum Strings {
             "appearance_dark": "Dark",
             "settings_language": "Language",
             "language_system": "System",
-            "settings_apikey": "API Key",
-            "apikey_placeholder": "Paste your API key…",
-            "apikey_help": "Stored securely in the Keychain, never in plain text.",
-            "apikey_present": "An API key is stored.",
-            "apikey_absent": "No API key stored.",
             "settings_about": "About",
-            "settings_about_text": "Generated from AppKitTemplate — macOS + iOS SwiftUI skeleton.",
+            "settings_about_text": "An entry point for OSINT — data imported from osint4all (CC0).",
+
+            "check_for_updates": "Check for Updates…",
 
             "ok": "OK",
             "error_title": "Error",

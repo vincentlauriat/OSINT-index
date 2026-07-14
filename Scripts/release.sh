@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Build → sign (Developer ID + Hardened Runtime) → DMG → notarize → staple.
-# Generic macOS release pipeline (no Sparkle auto-update).
+# Build → sign (Developer ID + Hardened Runtime) → DMG → notarize → staple →
+# Sparkle-sign → appcast.xml.
 #
 # Usage:   ./Scripts/release.sh <version>
 # Example: ./Scripts/release.sh 1.0.0
@@ -11,6 +11,21 @@
 # If you ever need to recreate the profile:
 #   xcrun notarytool store-credentials "AppliMacVincentGithub" \
 #     --apple-id "vincent@lauriat.fr" --team-id "KFLACS69T9"
+#
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ SPARKLE SIGNING KEY — DO NOT REGENERATE                                  │
+# │                                                                          │
+# │ Updates are EdDSA-signed with the private key in the login keychain      │
+# │ under account "OSINTIndex" (used by sign_update below). Its public half  │
+# │ is embedded in project.yml as SUPublicEDKey:                             │
+# │     kpUr3fknP2WreS4ilM3wxKrSCa5wzpayDoahd2k/jb4=                         │
+# │                                                                          │
+# │ NEVER run `generate_keys` again or import a new key into this account,   │
+# │ and NEVER change SUPublicEDKey — doing so makes every already-installed  │
+# │ app reject all future auto-updates. The private key is backed up at      │
+# │ Scripts/OSINTIndex.sparkle-keys-backup.txt (gitignored, local only) —    │
+# │ keep that file safe, it cannot be regenerated identically.               │
+# └──────────────────────────────────────────────────────────────────────────┘
 #
 # Overridable via env: APP_NAME, SCHEME, PROJECT, SIGNING_IDENTITY, NOTARY_PROFILE
 set -euo pipefail
@@ -72,6 +87,17 @@ codesign_ts() {
   echo "✗ codesign failed for $target" >&2
   return 1
 }
+SPARKLE_FW="$STAGING/Contents/Frameworks/Sparkle.framework"
+if [ -d "$SPARKLE_FW" ]; then
+  echo "▶︎ codesign Sparkle.framework nested binaries (deepest first)"
+  SPARKLE_VER="$SPARKLE_FW/Versions/B"
+  codesign_ts "$SPARKLE_VER/Autoupdate"
+  codesign_ts "$SPARKLE_VER/XPCServices/Downloader.xpc"
+  codesign_ts "$SPARKLE_VER/XPCServices/Installer.xpc"
+  codesign_ts "$SPARKLE_VER/Updater.app"
+  codesign_ts "$SPARKLE_FW"
+fi
+
 echo "▶︎ codesign (Developer ID, Hardened Runtime)"
 codesign_ts "$STAGING"
 codesign --verify --strict --deep --verbose=1 "$STAGING"
@@ -130,9 +156,52 @@ echo "▶︎ staple"
 xcrun stapler staple "$DMG"
 xcrun stapler validate "$DMG"
 
+# 7. Sign the DMG with the Sparkle EdDSA key and (re)generate appcast.xml so
+#    the in-app updater (Sparkle 2) can serve this version.
+SPARKLE_VERSION="2.9.1"
+SPARKLE_TOOLS="$ROOT/.sparkle-tools"
+if [ ! -x "$SPARKLE_TOOLS/bin/sign_update" ]; then
+  echo "▶︎ Fetching Sparkle $SPARKLE_VERSION tools (one-time setup)"
+  mkdir -p "$SPARKLE_TOOLS"
+  curl -fsSL "https://github.com/sparkle-project/Sparkle/releases/download/$SPARKLE_VERSION/Sparkle-$SPARKLE_VERSION.tar.xz" \
+    | tar -xJ -C "$SPARKLE_TOOLS"
+fi
+
+echo "▶︎ Signing $DMG with Sparkle EdDSA key (account: OSINTIndex)"
+# sign_update prints: sparkle:edSignature="..." length="<bytes>"
+SPARKLE_SIG_LINE="$("$SPARKLE_TOOLS/bin/sign_update" --account "OSINTIndex" "$DMG")"
+
+echo "▶︎ Writing $ROOT/appcast.xml (sparkle:version=$BUILD_NUMBER, shortVersionString=$VERSION)"
+PUB_DATE="$(date -R)"
+cat > "$ROOT/appcast.xml" <<APPCAST
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>$APP_NAME</title>
+    <link>https://raw.githubusercontent.com/vincentlauriat/OSINT-index/main/appcast.xml</link>
+    <description>$APP_NAME release feed</description>
+    <language>en</language>
+    <item>
+      <title>v$VERSION</title>
+      <pubDate>$PUB_DATE</pubDate>
+      <sparkle:version>$BUILD_NUMBER</sparkle:version>
+      <sparkle:shortVersionString>$VERSION</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://github.com/vincentlauriat/OSINT-index/releases/tag/v$VERSION</sparkle:releaseNotesLink>
+      <enclosure
+        url="https://github.com/vincentlauriat/OSINT-index/releases/download/v$VERSION/$(basename "$DMG")"
+        type="application/octet-stream"
+        $SPARKLE_SIG_LINE />
+    </item>
+  </channel>
+</rss>
+APPCAST
+
 SIZE="$(du -h "$DMG" | cut -f1 | tr -d ' ')"
 echo
-echo "✅ Built, signed, notarized & stapled: $(basename "$DMG") ($SIZE)"
+echo "✅ Built, signed, notarized, stapled & Sparkle-signed: $(basename "$DMG") ($SIZE)"
+echo "✅ appcast.xml written for v$VERSION"
 echo
 echo "Publish on GitHub:"
 echo "  gh release create v$VERSION \"$DMG\" --title \"v$VERSION\" --generate-notes"
+echo "  git add appcast.xml && git commit -m 'docs: appcast for v$VERSION' && git push"

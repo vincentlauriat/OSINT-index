@@ -2,16 +2,16 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(AppSettings.self) private var settings
-    @State private var vm = ItemsViewModel()
-    @State private var selectedId: String?
+    @State private var vm = CatalogViewModel()
+    @State private var selection: SidebarSelection? = .favorites
     #if os(iOS)
     @State private var showingSettings = false
     #endif
 
     var body: some View {
         NavigationSplitView {
-            ItemListView(vm: vm, selectedId: $selectedId)
-                .navigationSplitViewColumnWidth(min: 240, ideal: 280, max: 360)
+            CategoryListView(vm: vm, selection: $selection)
+                .navigationSplitViewColumnWidth(min: 220, ideal: 260, max: 360)
                 #if os(iOS)
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
@@ -24,24 +24,22 @@ struct ContentView: View {
                 }
                 #endif
         } detail: {
-            if let item = vm.selectedItem {
-                ItemDetailView(item: item)
-            } else {
-                EmptySelectionView()
+            detailContent
+        }
+        .searchable(text: $vm.searchText, placement: .sidebar, prompt: settings.t("search_placeholder"))
+        .task {
+            await vm.load()
+            if selection == .favorites, vm.favoriteTools.isEmpty, let first = vm.categories.first {
+                selection = .category(first.id)
             }
         }
-        .task { await vm.load() }
-        .onChange(of: selectedId) { _, id in
-            guard let id, let item = vm.items.first(where: { $0.id == id }) else { return }
-            vm.select(item)
-        }
         .alert(settings.t("error_title"), isPresented: Binding(
-            get: { vm.errorMessage != nil },
-            set: { if !$0 { vm.errorMessage = nil } }
+            get: { vm.errorMessageKey != nil },
+            set: { if !$0 { vm.errorMessageKey = nil } }
         )) {
-            Button(settings.t("ok")) { vm.errorMessage = nil }
+            Button(settings.t("ok")) { vm.errorMessageKey = nil }
         } message: {
-            Text(vm.errorMessage ?? "")
+            Text(vm.errorMessageKey.map(settings.t) ?? "")
         }
         #if os(iOS)
         .sheet(isPresented: $showingSettings) {
@@ -58,5 +56,25 @@ struct ContentView: View {
             }
         }
         #endif
+    }
+
+    @ViewBuilder
+    private var detailContent: some View {
+        if vm.isSearching {
+            ToolListView(vm: vm, title: settings.t("search_results_title"), tools: vm.searchResults)
+        } else {
+            switch selection {
+            case .favorites:
+                ToolListView(vm: vm, title: settings.t("favorites_title"), tools: vm.favoriteTools)
+            case .category(let id):
+                if let category = vm.categories.first(where: { $0.id == id }) {
+                    ToolListView(vm: vm, title: category.name, tools: category.tools)
+                } else {
+                    EmptySelectionView()
+                }
+            case .none:
+                EmptySelectionView()
+            }
+        }
     }
 }
