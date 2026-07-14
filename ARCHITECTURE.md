@@ -82,7 +82,7 @@ tâche de fond, le catalogue ne change qu'au rythme des commits sur `data/osint-
   d'ids en `UserDefaults`).
 - **Contrat de stabilité** : renommer ou recatégoriser un outil dans une édition manuelle future
   change son `id` et perd silencieusement le favori des utilisateurs qui l'avaient marqué —
-  compromis accepté vu le volume (~3000 outils), pas de système de migration d'ID.
+  compromis accepté vu le volume (~1450 outils), pas de système de migration d'ID.
 
 ## Décisions clés
 

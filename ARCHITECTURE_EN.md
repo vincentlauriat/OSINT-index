@@ -81,7 +81,7 @@ catalog only changes at the pace of commits to `data/osint-tools.json`.
   what backs favorites persistence (`FavoritesStore`, a `Set<String>` of ids in `UserDefaults`).
 - **Stability contract**: renaming or re-categorizing a tool in a future manual edit changes its
   `id` and silently drops the favorite for users who had starred it — an accepted trade-off given
-  the volume (~3000 tools); no ID migration system is planned.
+  the volume (~1450 tools); no ID migration system is planned.
 
 ## Key decisions
 
