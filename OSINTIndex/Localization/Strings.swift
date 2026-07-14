@@ -38,6 +38,9 @@ enum Strings {
             "settings_about": "À propos",
             "settings_about_text": "Un point d'entrée pour faire de l'OSINT — données importées depuis osint4all (CC0).",
 
+            // Menu (macOS)
+            "check_for_updates": "Rechercher les mises à jour…",
+
             // Divers
             "ok": "OK",
             "error_title": "Erreur",
@@ -69,6 +72,8 @@ enum Strings {
             "language_system": "System",
             "settings_about": "About",
             "settings_about_text": "An entry point for OSINT — data imported from osint4all (CC0).",
+
+            "check_for_updates": "Check for Updates…",
 
             "ok": "OK",
             "error_title": "Error",

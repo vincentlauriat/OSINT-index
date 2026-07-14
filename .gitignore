@@ -40,6 +40,7 @@ CHANGES.md
 
 # ── Sparkle EdDSA private key backup (never versioned) ────
 Scripts/*.sparkle-keys-backup.txt
+.sparkle-tools/
 
 # ── Dead-link checker local state/report (regenerated) ─────
 Scripts/.dead-link-state.json
