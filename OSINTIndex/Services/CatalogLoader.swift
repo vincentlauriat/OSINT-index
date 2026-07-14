@@ -1,4 +1,5 @@
 import Foundation
+import os
 
 enum CatalogSource {
     case network, cache, bundle
@@ -13,6 +14,8 @@ struct CatalogLoadResult {
 /// bundled fallback. Refresh only happens on demand (app launch / manual refresh),
 /// never via background polling.
 final class CatalogLoader {
+    private static let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "fr.vincentlauriat.osintindex", category: "CatalogLoader")
+
     private let remoteURL: URL
     private let cacheURL: URL
     private let bundleURL: URL?
@@ -36,11 +39,21 @@ final class CatalogLoader {
         if let result = await fetchFromNetwork() {
             return result
         }
-        if let catalog = try? loadCatalog(from: cacheURL) {
+        do {
+            let catalog = try loadCatalog(from: cacheURL)
             return CatalogLoadResult(catalog: catalog, source: .cache)
+        } catch {
+            Self.logger.error("Disk cache unavailable or failed to decode: \(String(describing: error), privacy: .public)")
         }
-        if let bundleURL, let catalog = try? loadCatalog(from: bundleURL) {
-            return CatalogLoadResult(catalog: catalog, source: .bundle)
+        if let bundleURL {
+            do {
+                let catalog = try loadCatalog(from: bundleURL)
+                return CatalogLoadResult(catalog: catalog, source: .bundle)
+            } catch {
+                Self.logger.fault("Bundled catalog failed to decode — this should never happen: \(String(describing: error), privacy: .public)")
+            }
+        } else {
+            Self.logger.fault("No bundled osint-tools.json resource found")
         }
         return nil
     }
@@ -50,11 +63,16 @@ final class CatalogLoader {
         request.timeoutInterval = 10
         do {
             let (data, response) = try await session.data(for: request)
-            guard let http = response as? HTTPURLResponse, http.statusCode == 200 else { return nil }
+            guard let http = response as? HTTPURLResponse, http.statusCode == 200 else {
+                let status = (response as? HTTPURLResponse)?.statusCode
+                Self.logger.notice("Network fetch returned non-200 status: \(status ?? -1)")
+                return nil
+            }
             let catalog = try decode(data)
             try? data.write(to: cacheURL, options: .atomic)
             return CatalogLoadResult(catalog: catalog, source: .network)
         } catch {
+            Self.logger.error("Network fetch or decode failed: \(String(describing: error), privacy: .public)")
             return nil
         }
     }
