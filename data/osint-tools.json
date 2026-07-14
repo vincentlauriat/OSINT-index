@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-14T17:50:33Z",
+  "generatedAt": "2026-07-14T20:18:36Z",
   "source": {
     "importedFrom": "https://raw.githubusercontent.com/osint4all/osint4all.github.io/main/README.md",
     "importedAt": "2026-07-14T17:50:33Z",
@@ -8346,6 +8346,55 @@
           "url": "https://www.aware-online.com/en/osint-tools/cryptocurrency-tools/",
           "notes": null,
           "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-blockchain-explorer-2",
+          "name": "Blockchain Explorer",
+          "url": "https://www.blockchain.com/explorer?utm_campaign=expnav_explorer",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-coin-market-cap",
+          "name": "Coin Market Cap",
+          "url": "https://coinmarketcap.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-bloxy",
+          "name": "Bloxy",
+          "url": "https://bloxy.info/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-blockchair",
+          "name": "Blockchair",
+          "url": "https://blockchair.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-tokenview",
+          "name": "Tokenview",
+          "url": "https://tokenview.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-walletexplorer",
+          "name": "WalletExplorer",
+          "url": "https://www.walletexplorer.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "cryptocurrency-elliptic",
+          "name": "Elliptic",
+          "url": "https://www.elliptic.co/",
+          "notes": null,
+          "addedManually": false
         }
       ]
     },
@@ -10724,6 +10773,2050 @@
           "id": "can-corporation-registrant-lookup",
           "name": "Registrant Lookup",
           "url": "https://www.cdsbc.org/home/registrant-lookup#/lookup/dentists",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "osint-books",
+      "name": "OSINT Books",
+      "order": 78,
+      "tools": [
+        {
+          "id": "osint-books-osint-the-authoritative-guide-to-due-diligence",
+          "name": "⭐ OSINT: The Authoritative Guide to Due Diligence",
+          "url": "https://www.amazon.com/Osint-Authoritative-Guide-Due-Diligence/dp/1960299425",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-deep-dive-exploring-the-real-world-value-of-osint",
+          "name": "⭐Deep Dive: Exploring the Real-World Value of OSINT",
+          "url": "https://www.amazon.com/Deep-Dive-Exploring-Real-world-Intelligence/dp/1119933242",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-open-source-intelligence-techniques-by-michael-bazzell",
+          "name": "⭐Open Source Intelligence Techniques by Michael Bazzell",
+          "url": "https://inteltechniques.com/book1.html",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-custom-search-discover-more-a-complete-guide-to-google",
+          "name": "Custom Search - Discover More: A Complete Guide to Google",
+          "url": "https://www.amazon.com/Custom-Search-Discover-Complete-Programmable/dp/0367567393",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-down-the-rabbit-hole-an-osint-journey",
+          "name": "Down the Rabbit Hole: An OSINT Journey",
+          "url": "https://www.amazon.com/Down-Rabbit-Hole-OSINT-Journey/dp/0995687544",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-google-hacking-for-penetration-testers",
+          "name": "Google Hacking for Penetration Testers",
+          "url": "https://www.amazon.com/Google-Hacking-Penetration-Testers-Johnny/dp/0128029641",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-hack-the-world-with-osint",
+          "name": "Hack The World with OSINT",
+          "url": "https://www.amazon.com/Hack-World-OSINT-Hackers-Gonna/dp/0995687595",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-hunting-cyber-criminals",
+          "name": "Hunting Cyber Criminals",
+          "url": "https://www.amazon.com/OSINT-Toolkit-Intelligence-Gathering-Investigations/dp/1119540925",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-open-source-intelligence-methods-and-tools",
+          "name": "Open Source Intelligence Methods and Tools",
+          "url": "https://www.amazon.com/Open-Source-Intelligence-Methods-Tools/dp/1484232127",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-operator-handbook-red-team-osint-blue-team",
+          "name": "Operator Handbook: Red Team + OSINT + Blue Team",
+          "url": "https://www.amazon.com/Operator-Handbook-Team-OSINT-Reference/dp/B085RR67H5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-osint-investigations-we-know-what-you-did-that-summer",
+          "name": "OSINT Investigations: We know what you did that summer",
+          "url": "https://www.amazon.com/OSINT-Investigations-summer-Cyber-Secrets/dp/B09PHHDFBM",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-the-internet-intelligence-investigation-handbook",
+          "name": "The Internet Intelligence & Investigation Handbook",
+          "url": "https://www.amazon.com/Internet-Intelligence-Investigation-Handbook-practical-ebook/dp/B0961BXYPS",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-verification-handbook",
+          "name": "Verification Handbook",
+          "url": "https://verificationhandbook.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-books-we-are-bellingcat",
+          "name": "We Are Bellingcat",
+          "url": "https://www.bellingcat.com/book/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "osint-communities-discussion",
+      "name": "OSINT Communities & Discussion",
+      "order": 79,
+      "tools": [
+        {
+          "id": "osint-communities-discussion-bellingcat-discord",
+          "name": "⭐Bellingcat Discord",
+          "url": "https://discord.gg/nTaNPmz",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-kase-discord-server",
+          "name": "⭐Kase Discord Server",
+          "url": "https://t.co/CQk8uWWQsE",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-project-owl-discord",
+          "name": "⭐Project Owl Discord",
+          "url": "https://discord.gg/projectowl",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-r-osint",
+          "name": "⭐r/OSINT",
+          "url": "https://www.reddit.com/r/OSINT/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-csi-linux-discord",
+          "name": "CSI Linux Discord",
+          "url": "https://discord.com/invite/qZkynjuv",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-defcon-discord",
+          "name": "DEFCON Discord",
+          "url": "https://discord.gg/defcon",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-element-osint-chat-matrix",
+          "name": "Element: OSINT Chat - Matrix",
+          "url": "https://app.element.io/#/room/#osint-chat:matrix.org",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-hack-south",
+          "name": "Hack South",
+          "url": "https://discord.gg/nTJFJrUwwT",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-imaginary-ctf-discord",
+          "name": "Imaginary CTF Discord",
+          "url": "https://discord.gg/sjVcTTXg6a",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-nordic-osint-community",
+          "name": "Nordic OSINT Community",
+          "url": "https://www.osinord.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-openosint-team-slack",
+          "name": "Openosint Team Slack",
+          "url": "https://openosint.slack.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-osint-editor-discord",
+          "name": "OSINT Editor Discord",
+          "url": "https://discord.gg/M5pk9rE",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-osint-switzerland",
+          "name": "OSINT Switzerland",
+          "url": "https://osintswitzerland.ch/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-osint-switzerland-discord",
+          "name": "OSINT Switzerland Discord",
+          "url": "https://discord.com/invite/FTTNyGe9ta",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-osint-uk-discord-server",
+          "name": "OSINT UK Discord Server",
+          "url": "https://discord.com/invite/8bcRDaP9Bv",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-osint-fr-france",
+          "name": "OSINT-FR (France)",
+          "url": "https://osintfr.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-osint-fr-discord",
+          "name": "OSINT-FR Discord",
+          "url": "https://discord.osintfr.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-osintia-com",
+          "name": "Osintia.com",
+          "url": "https://osintia.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-osmosis-association",
+          "name": "OSMOSIS Association",
+          "url": "https://l.osmosisinstitute.org/osmosis-institute-current",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-overt-operator-crowdsourced-intelligence",
+          "name": "Overt Operator: Crowdsourced Intelligence",
+          "url": "https://discord.com/invite/overt-operator-967221648635871283",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-overt-operator-crowdsourced-intelligence-2",
+          "name": "Overt Operator: Crowdsourced Intelligence",
+          "url": "https://discord.gg/FtT2dxwMxb",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-r-infosecnews",
+          "name": "r/InfoSecNews",
+          "url": "https://www.reddit.com/r/InfoSecNews/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-r-rbi",
+          "name": "r/RBI",
+          "url": "https://www.reddit.com/r/RBI/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-sans-blue-team-discord",
+          "name": "SANS Blue Team Discord",
+          "url": "https://discord.gg/ZvgwPtuusE",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-the-osintion-discord",
+          "name": "The OSINTion Discord",
+          "url": "https://discord.gg/p78TTGa",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-trace-labs-discord",
+          "name": "Trace Labs Discord",
+          "url": "https://discord.com/invite/Rn8z2QNAD9",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-uk-osint-community",
+          "name": "UK OSINT Community",
+          "url": "https://www.osint.uk/join",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osint-communities-discussion-websleuths",
+          "name": "Websleuths",
+          "url": "https://www.websleuths.com/forums/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "linkedin-groups",
+      "name": "LinkedIn Groups",
+      "order": 80,
+      "tools": [
+        {
+          "id": "linkedin-groups-cybercrime-investigators-network",
+          "name": "CyberCrime Investigators Network",
+          "url": "https://www.linkedin.com/groups/2044418/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "linkedin-groups-intelligence-and-security",
+          "name": "Intelligence and Security",
+          "url": "https://www.linkedin.com/groups/3131037/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "linkedin-groups-investigator-s-forum",
+          "name": "Investigator's Forum",
+          "url": "https://www.linkedin.com/groups/1681327/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "linkedin-groups-open-source-intelligence-gathering",
+          "name": "Open Source Intelligence Gathering",
+          "url": "https://www.linkedin.com/groups/109528/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "linkedin-groups-open-source-intelligence-professionals",
+          "name": "Open Source Intelligence Professionals",
+          "url": "https://www.linkedin.com/groups/64725/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "linkedin-groups-osint-experts-resources",
+          "name": "OSINT Experts & Resources",
+          "url": "https://www.linkedin.com/groups/12425038/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "linkedin-groups-ozint",
+          "name": "OZINT",
+          "url": "https://www.linkedin.com/company/ozint-eu/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "linkedin-groups-sans-osint-community",
+          "name": "SANS OSINT Community",
+          "url": "https://www.linkedin.com/groups/12373405/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "linkedin-groups-social-media-intelligence-socmint",
+          "name": "Social Media Intelligence (SOCMINT)",
+          "url": "https://www.linkedin.com/groups/4696576/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "linkedin-groups-uk-osint-community-li",
+          "name": "UK OSINT Community - LI",
+          "url": "https://linkedin.com/company/osintuk/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "osintforgood-sites-groups",
+      "name": "#OSINTforGood Sites & Groups",
+      "order": 81,
+      "tools": [
+        {
+          "id": "osintforgood-sites-groups-ntl-child-protection-task-force",
+          "name": "⭐Ntl Child Protection Task Force",
+          "url": "https://www.ncptf.org/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osintforgood-sites-groups-stop-child-abuse-trace-an-object",
+          "name": "⭐Stop Child Abuse – Trace an Object",
+          "url": "https://www.europol.europa.eu/stopchildabuse",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osintforgood-sites-groups-atii-anti-human-trafficking-intel-initiative",
+          "name": "ATII - Anti-Human Trafficking Intel Initiative",
+          "url": "https://followmoneyfightslavery.org/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osintforgood-sites-groups-bellingcat-s-volunteer-community",
+          "name": "Bellingcat's Volunteer Community",
+          "url": "https://sites.google.com/bellingcat.com/bellingcat-volunteer-community",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osintforgood-sites-groups-citizen-evidence-lab-amnest-intl",
+          "name": "CITIZEN EVIDENCE LAB - Amnest Intl",
+          "url": "https://citizenevidence.org/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osintforgood-sites-groups-crisismapping-ning-com",
+          "name": "Crisismapping.ning.com",
+          "url": "http://crisismapping.ning.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osintforgood-sites-groups-fbi-ecap",
+          "name": "FBI - ECAP",
+          "url": "https://www.fbi.gov/wanted/ecap",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osintforgood-sites-groups-locate-international",
+          "name": "Locate.international",
+          "url": "https://locate.international/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osintforgood-sites-groups-missing-persons-hackathon-australia",
+          "name": "Missing Persons Hackathon Australia",
+          "url": "https://www.missingpersonshackathon.com.au/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osintforgood-sites-groups-r-traceanobject",
+          "name": "r/TraceAnObject",
+          "url": "https://www.reddit.com/r/TraceAnObject/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "osintforgood-sites-groups-trace-labs",
+          "name": "Trace Labs",
+          "url": "https://www.tracelabs.org/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "news-blogs",
+      "name": "News & Blogs",
+      "order": 82,
+      "tools": [
+        {
+          "id": "news-blogs-cqcore-ginger-t",
+          "name": "⭐CQcore - Ginger_T",
+          "url": "https://www.cqcore.uk/blog-posts/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-cyb-detective-thread-reader-app",
+          "name": "⭐cyb_detective Thread Reader App",
+          "url": "https://threadreaderapp.com/user/cyb_detective",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-hatless1der-blog",
+          "name": "⭐hatless1der Blog",
+          "url": "https://hatless1der.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-nixintel",
+          "name": "⭐NixIntel",
+          "url": "https://nixintel.info/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-bellingcat",
+          "name": "Bellingcat",
+          "url": "https://bellingcat.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-benjamin-strick-blog",
+          "name": "Benjamin Strick Blog",
+          "url": "https://benjaminstrick.com/blog/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-bushidotoken",
+          "name": "BushidoToken",
+          "url": "https://blog.bushidotoken.net/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-dutch-osint-guy-nico",
+          "name": "Dutch OSINT Guy Nico",
+          "url": "https://www.dutchosintguy.com/blog",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-exposing-the-invisible",
+          "name": "Exposing the Invisible",
+          "url": "https://exposingtheinvisible.org/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-gralhix-osint-geoint-tutorials",
+          "name": "Gralhix | OSINT & GEOINT Tutorials",
+          "url": "https://gralhix.com/category/blog-entries/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-hakin9-blog",
+          "name": "Hakin9 Blog",
+          "url": "https://hakin9.org/blog-2/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-inteltechniques-blog",
+          "name": "IntelTechniques Blog",
+          "url": "https://inteltechniques.com/blog/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-key-findings-blog-mw-osint",
+          "name": "Key Findings Blog - MW OSINT",
+          "url": "https://keyfindings.blog/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-krebs-on-security",
+          "name": "Krebs on Security",
+          "url": "https://krebsonsecurity.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-maltego-osint-blogs",
+          "name": "Maltego - OSINT Blogs",
+          "url": "https://www.maltego.com/categories/osint/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-offensive-osint",
+          "name": "Offensive OSINT",
+          "url": "https://www.offensiveosint.io/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-oh-shint-blog",
+          "name": "OH SHINT Blog",
+          "url": "https://ohshint.gitbook.io/oh-shint-its-a-blog/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-osint-combine-blog",
+          "name": "OSINT Combine Blog",
+          "url": "https://www.osintcombine.com/blog",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-osint-team-blog",
+          "name": "OSINT TEAM Blog",
+          "url": "https://www.osintteam.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-osintcurio-us",
+          "name": "OSINTCurio.us",
+          "url": "https://osintcurio.us/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-petro-cherkasets-medium",
+          "name": "Petro Cherkasets - Medium",
+          "url": "https://medium.com/@peteruxer",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-renato-trabucco-digital-forensics-osint-analysis",
+          "name": "Renato Trabucco | Digital Forensics & OSINT Analysis",
+          "url": "https://thenerdinthehighcastle.wordpress.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-secjuice-osint-articles",
+          "name": "Secjuice - OSINT Articles",
+          "url": "https://www.secjuice.com/tag/osint/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-seintpl-osint-translated-articles",
+          "name": "seintpl/osint translated articles",
+          "url": "https://github.com/seintpl/osint/blob/main/OSINT-SE-translated-articles.md",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-skopenow-blog",
+          "name": "Skopenow Blog",
+          "url": "https://www.skopenow.com/news",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-techjournalist-medium",
+          "name": "Techjournalist Medium",
+          "url": "https://techjournalism.medium.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-the-security-noob",
+          "name": "The Security Noob",
+          "url": "https://thesecuritynoob.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-veexh-medium",
+          "name": "VEEXH – Medium",
+          "url": "https://medium.com/@VEEXH",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-webbreacher-s-hacking-and-hiking-blog",
+          "name": "WebBreacher's Hacking and Hiking Blog",
+          "url": "https://webbreacher.com/category/infosec/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-blogs-wondersmith-rae",
+          "name": "Wondersmith Rae",
+          "url": "https://wondersmithrae.medium.com/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "newsletters",
+      "name": "Newsletters",
+      "order": 83,
+      "tools": [
+        {
+          "id": "newsletters-cyb-detectives-substack",
+          "name": "⭐Cyb_detective’s Substack",
+          "url": "https://cybdetective.substack.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "newsletters-digital-investigations-craig-silverman",
+          "name": "⭐Digital Investigations - Craig Silverman",
+          "url": "https://digitalinvestigations.substack.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "newsletters-my-osint-newsletter",
+          "name": "⭐My OSINT Newsletter",
+          "url": "https://myosint.link/newsletter",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "newsletters-alicja-pawowska-s-osint-newsletter",
+          "name": "Alicja Pawłowska's OSINT Newsletter",
+          "url": "https://www.alicjapawlowska.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "newsletters-cyber-hunter-academy-spanish",
+          "name": "Cyber Hunter Academy (Spanish)",
+          "url": "https://site.cyberhunteracademy.com/newsletter/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "newsletters-data2know-by-hetherington-group",
+          "name": "Data2Know by Hetherington Group",
+          "url": "https://www.hetheringtongroup.com/insights/newsletters/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "newsletters-osint-jobs-newsletter",
+          "name": "OSINT Jobs Newsletter",
+          "url": "https://osintjobs.substack.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "newsletters-osint-team-newsletter",
+          "name": "OSINT TEAM Newsletter",
+          "url": "https://www.osintteam.com/the-practical-osint-newsletter/issue-1/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "newsletters-osint-updates-by-osint-ambition",
+          "name": "Osint Updates by OSINT Ambition",
+          "url": "https://osintupdates.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "newsletters-the-sunday-download-gary-ruddell",
+          "name": "The Sunday Download - Gary Ruddell",
+          "url": "https://www.garyruddell.com/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "training-how-to-guides",
+      "name": "Training, How-To & Guides",
+      "order": 84,
+      "tools": [
+        {
+          "id": "training-how-to-guides-my-osint-training",
+          "name": "⭐My OSINT Training",
+          "url": "https://myosint.training/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-osint-combine-training-courses",
+          "name": "⭐OSINT Combine Training Courses",
+          "url": "https://academy.osintcombine.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-bellingcat-workshops",
+          "name": "Bellingcat Workshops",
+          "url": "https://www.bellingcat.com/workshops/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-csi-linux-certification-courses-csi-linux",
+          "name": "CSI Linux Certification Courses – CSI Linux",
+          "url": "https://csilinux.com/product-category/csilinuxcertificationcourses/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-cybrary-osint-fundamentals",
+          "name": "Cybrary - OSINT Fundamentals",
+          "url": "https://www.cybrary.it/course/osint-fundamentals/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-fact-checking-verification",
+          "name": "Fact-Checking & Verification",
+          "url": "https://gijn.org/fact-checking-verification/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-gerryguy311-list-conf-training-webinars",
+          "name": "gerryguy311 List Conf/Training/Webinars",
+          "url": "https://github.com/gerryguy311/CyberProfDevelopmentCovidResources/blob/master/README.md",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-hakin9-online-courses",
+          "name": "Hakin9 Online Courses",
+          "url": "https://hakin9.org/online-courses-2/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-i-intelligencetraining",
+          "name": "i-intelligenceTraining",
+          "url": "https://i-intelligence.eu/training",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-intel-techniques-online-training",
+          "name": "Intel Techniques Online Training",
+          "url": "https://inteltechniques.com/training.html",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-knight-center-digital-investigations-for-journalists",
+          "name": "Knight Center: Digital investigations for journalists",
+          "url": "https://journalismcourses.org/course/digital-investigations-for-journalists_self/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-plessas-experts-network",
+          "name": "Plessas Experts Network",
+          "url": "https://academy.plessas.net/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-sans-osint-sec-497",
+          "name": "SANS OSINT Sec 497",
+          "url": "https://www.sans.org/cyber-security-courses/open-source-intelligence-gathering/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-tcm-security-inc-osint-fundamentals",
+          "name": "TCM Security, Inc. OSINT Fundamentals",
+          "url": "https://academy.tcm-sec.com/p/osint-fundamentals",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-the-osintion",
+          "name": "The OSINTION",
+          "url": "https://www.theosintion.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "training-how-to-guides-toddington",
+          "name": "Toddington",
+          "url": "https://www.toddington.com/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "webcasts-videos-playlists",
+      "name": "Webcasts, Videos & Playlists",
+      "order": 85,
+      "tools": [
+        {
+          "id": "webcasts-videos-playlists-gralhix-osint-challenge-videos",
+          "name": "⭐Gralhix OSINT Challenge Videos",
+          "url": "https://www.youtube.com/@gralhix/videos",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-osint-at-home-ben-strick",
+          "name": "⭐OSINT At Home - Ben Strick",
+          "url": "https://www.youtube.com/playlist?list=PLrFPX1Vfqk3ehZKSFeb9pVIHqxqrNW8Sy",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-0x4rk-youtube",
+          "name": "0x4rkØ - YouTube",
+          "url": "https://www.youtube.com/c/0x4rk%C3%98/videos",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-10-minute-tips-osintcurio-us",
+          "name": "10 Minute Tips - Osintcurio.us",
+          "url": "https://www.youtube.com/playlist?list=PL423I_gHbWUUOs09899rex4t2l5py9YIk",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-authentic8-youtube",
+          "name": "Authentic8 - YouTube",
+          "url": "https://www.youtube.com/user/Authentic8TV",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-conint-youtube",
+          "name": "conINT - YouTube",
+          "url": "https://www.youtube.com/channel/UCBtSOceclpKcvunVNw82tFQ/videos",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-david-bombal-s-osint-video-playlist",
+          "name": "David Bombal's OSINT Video Playlist",
+          "url": "https://www.youtube.com/watch?v=ImWJgDQ-_ek&list=PLhfrWIlLOoKPT0y4R_mM4y-2QdfLpAWXl",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-hunchly-webinars-trainings",
+          "name": "Hunchly Webinars/Trainings",
+          "url": "https://www.youtube.com/c/hunchly",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-my-osint-training-youtube",
+          "name": "My OSINT Training YouTube",
+          "url": "https://www.youtube.com/@myosinttraining",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-os2int-youtube",
+          "name": "OS2INT - YouTube",
+          "url": "https://www.youtube.com/channel/UCiTtUem3FCejtq313ugzDeQ",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-osint-curious",
+          "name": "OSINT Curious",
+          "url": "https://www.youtube.com/channel/UCjzceWf-OT3ImIKztzGkipA/videos",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-osint-dojo-youtube",
+          "name": "OSINT Dojo - YouTube",
+          "url": "https://www.youtube.com/osintdojo",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-sans-blue-team-ops",
+          "name": "SANS Blue Team Ops",
+          "url": "https://www.youtube.com/c/SANSBlueTeamOps",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-sans-institute",
+          "name": "SANS Institute",
+          "url": "https://www.youtube.com/channel/UC2uPNhGken-ogEpJDi4ly6w",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-scsp-osint-tools-series-youtube",
+          "name": "SCSP OSINT Tools Series - YouTube",
+          "url": "https://www.youtube.com/playlist?list=PL7yUP1guJz7fZNfZM-zkUieKSeA1TCG2S",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-the-cyber-mentor",
+          "name": "The Cyber Mentor",
+          "url": "https://www.youtube.com/@TCMSecurityAcademy",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "webcasts-videos-playlists-trace-labs-youtube",
+          "name": "Trace Labs - YouTube",
+          "url": "https://www.youtube.com/channel/UCezKbcbnYtrwRXfGzgQMI3w",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "challenges-ctfs",
+      "name": "Challenges & CTFs",
+      "order": 86,
+      "tools": [
+        {
+          "id": "challenges-ctfs-gralhix-osint-exercises",
+          "name": "⭐Gralhix - OSINT Exercises",
+          "url": "https://gralhix.com/list-of-osint-exercises/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-kase-scenarios",
+          "name": "⭐Kase Scenarios",
+          "url": "https://kasescenarios.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-sakura-tryhackme-room-by-osint-dojo",
+          "name": "⭐Sakura TryHackMe Room by OSINT Dojo",
+          "url": "https://tryhackme.com/room/sakura",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-bellingcat-open-source-challenge",
+          "name": "Bellingcat Open Source Challenge",
+          "url": "https://challenge.bellingcat.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-blueteamlabs-online",
+          "name": "Blueteamlabs.online",
+          "url": "https://blueteamlabs.online/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-cyberdefenders-blue-team-ctf-challenges",
+          "name": "CyberDefenders Blue Team CTF Challenges",
+          "url": "https://cyberdefenders.org/labs/38",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-epcyber-china-focused-ctfs",
+          "name": "EPCYBER China-Focused CTFs",
+          "url": "https://epcyber.com/ctf",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-geoguessr",
+          "name": "geoguessr",
+          "url": "https://geoguessr.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-imaginary-ctf-daily-challenge",
+          "name": "Imaginary CTF Daily Challenge",
+          "url": "https://imaginaryctf.org/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-limitless-osint",
+          "name": "Limitless OSINT",
+          "url": "https://limitless-osint.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-operation-oshint-shake-the-cobwebs",
+          "name": "Operation OShINT: Shake The Cobwebs",
+          "url": "https://csilinux.com/files/stories/Operation_OShINT_-_Shake_The_Cobwebs.html",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-osint-combine-capture-the-flag",
+          "name": "OSINT Combine Capture-the-Flag",
+          "url": "https://osintcombine.ctfd.io/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-osint-dojo",
+          "name": "OSINT Dojo",
+          "url": "https://www.osintdojo.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-osint-corporate-recon-htb-academy",
+          "name": "OSINT: Corporate Recon : HTB Academy",
+          "url": "https://academy.hackthebox.com/course/preview/osint-corporate-recon",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-picturegame",
+          "name": "PictureGame",
+          "url": "https://www.reddit.com/r/PictureGame/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-sector035-osint-quiz-2019",
+          "name": "𝕊𝕖𝕔𝕥𝕠𝕣𝟘𝟛𝟝 OSINT Quiz 2019",
+          "url": "https://twitter.com/Sector035/status/1211038518635614208",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-sector035-osint-quiz-2020",
+          "name": "𝕊𝕖𝕔𝕥𝕠𝕣𝟘𝟛𝟝 OSINT Quiz 2020",
+          "url": "https://twitter.com/Sector035/status/1344378578490830848",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-seint-pl-osintquiz",
+          "name": "SEINT_pl - osintquiz",
+          "url": "https://github.com/seintpl/osintquiz",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-sourcing-games",
+          "name": "Sourcing.Games",
+          "url": "https://sourcing.games/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-the-insider-threat-ctf",
+          "name": "The Insider Threat CTF 🔎",
+          "url": "https://blog.bushidotoken.net/p/ctf.html",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-trace-labs-ctfs",
+          "name": "Trace Labs CTFs",
+          "url": "https://www.tracelabs.org/initiatives/search-party",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-tryhackme-geolocating-images",
+          "name": "Tryhackme Geolocating Images",
+          "url": "https://tryhackme.com/room/geolocatingimages",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-tryhackme-google-dorking",
+          "name": "Tryhackme Google Dorking",
+          "url": "https://tryhackme.com/room/googledorking",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-tryhackme-ohsint",
+          "name": "TryHackMe OhSINT",
+          "url": "https://tryhackme.com/room/ohsint",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-tryhackme-searchlight-imint",
+          "name": "Tryhackme Searchlight IMINT",
+          "url": "https://tryhackme.com/room/searchlightosint",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-verif-cation-quiz-bot",
+          "name": "Verif!cation Quiz Bot",
+          "url": "https://twitter.com/quiztime",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-whatisthisthing",
+          "name": "WhatIsThisThing",
+          "url": "https://www.reddit.com/r/whatisthisthing/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "challenges-ctfs-where-in-the-world-is-mrs-osint",
+          "name": "Where In The World Is Mrs. OSINT?",
+          "url": "https://www.mrsosint.com/where-in-the-world-is-mrs-osint/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "collections",
+      "name": "Collections",
+      "order": 87,
+      "tools": [
+        {
+          "id": "collections-my-osint-trainings-tools",
+          "name": "⭐ My OSINT Training’s Tools",
+          "url": "https://tools.myosint.training/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-bellingcat-s-online-investigation-toolkit",
+          "name": "⭐Bellingcat's Online Investigation Toolkit",
+          "url": "https://bellingcat.gitbook.io/toolkit",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-asint-collection",
+          "name": "AsINT_Collection",
+          "url": "https://start.me/p/b5Aow7/asint_collection",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-aware-online-osint-tools",
+          "name": "Aware Online OSINT tools",
+          "url": "https://www.aware-online.com/en/osint-tools/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-bbc-africa-eye-forensics-dashboard",
+          "name": "BBC Africa Eye - Forensics Dashboard",
+          "url": "https://start.me/p/m6OJgv/the-bbc-africa-eye-forensics-dashboard",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-cse-utopia-google-custom-searches",
+          "name": "CSE Utopia- Google Custom Searches",
+          "url": "https://start.me/p/EL84Km/cse-utopia",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-cti-start-me-paranoid-ch1ck",
+          "name": "CTI Start.me Paranoid_ch1ck",
+          "url": "https://start.me/p/rxRbpo/ti?locale=en",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-cybersecstu-set-it-on-child-osint-for-finding-people",
+          "name": "CyberSecStu: Set it on 🔥child -OSINT for Finding People",
+          "url": "https://docs.google.com/spreadsheets/d/1JxBbMt4JvGr--G0Pkl3jP9VDTBunR2uD3_faZXDvhxc/edit#gid=603724104",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-dating-apps-and-hook-up-sites-frenchpi",
+          "name": "Dating apps and hook-up sites- frenchPI",
+          "url": "https://start.me/p/VRxaj5/dating-apps-and-hook-up-sites-for-investigators",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-dfirdetective-s-sans-osint-summit-2022-links",
+          "name": "DFIRDetective's SANS OSINT Summit 2022 Links",
+          "url": "https://start.me/p/1kBrw9/sans-osint-2022",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-digintel-cnty-usa",
+          "name": "Digintel - CNTY USA",
+          "url": "https://start.me/p/kxMBv9/cnty-usa",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-digintel-osint-start-me",
+          "name": "Digintel OSINT Start.me",
+          "url": "https://start.me/p/ZME8nR/osint",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-fbi-tools-by-daniel-durnea",
+          "name": "FBI Tools by Daniel Durnea",
+          "url": "https://github.com/danieldurnea/FBI-tools",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-genealogy-startme-by-cshellshelly123",
+          "name": "Genealogy startme by Cshellshelly123",
+          "url": "https://start.me/p/ek1bpw/genealogy",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-gijn-online-research-tools",
+          "name": "GIJN - Online Research Tools",
+          "url": "https://gijn.org/online-research-tools/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-google-advanced-search-operators",
+          "name": "Google Advanced Search Operators",
+          "url": "https://docs.google.com/document/d/1ydVaJJeL1EYbWtlfj9TPfBTE5IBADkQfZrQaBZxqXGs/edit",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-hun-osint-start-me",
+          "name": "Hun-OSINT Start.me",
+          "url": "https://start.me/p/kxGLzd/hun-osint",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-i-intelligence-handbook-2025",
+          "name": "i-intelligence handbook (2025)",
+          "url": "https://www.osinthandbook.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-intel0gist-s-advanced-search-tools",
+          "name": "Intel0gist's Advanced Search Tools",
+          "url": "https://start.me/p/nRADzL/advanced-search-tools",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-intelligence-x-tools",
+          "name": "Intelligence X Tools",
+          "url": "https://intelx.io/tools",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-ivmachiavelli-osint-team",
+          "name": "IVMachiavelli - OSINT Team",
+          "url": "https://github.com/IVMachiavelli/OSINT_Team_Links",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-journalist-s-toolbox",
+          "name": "Journalist's Toolbox",
+          "url": "https://www.journaliststoolbox.org/category/investigative/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-lorand-bodo-start-me",
+          "name": "Lorand Bodo Start.me",
+          "url": "https://start.me/p/7kxyy2/osint-tools-curated-by-lorand-bodo",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-malfrat-s-osint-map",
+          "name": "Malfrat's OSINT Map",
+          "url": "https://map.malfrats.industries/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-meta-osint-by-intelscott",
+          "name": "Meta OSINT by IntelScott",
+          "url": "https://metaosint.github.io/table",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-nixintel-start-me",
+          "name": "NixIntel Start.Me",
+          "url": "https://start.me/p/rx6Qj8/start-page",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-offensive-security-cheatsheet",
+          "name": "Offensive Security Cheatsheet",
+          "url": "https://cheatsheet.haax.fr/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-officer-cia-non-typical-osint-guide",
+          "name": "officer_cia Non Typical OSINT Guide",
+          "url": "https://github.com/OffcierCia/non-typical-OSINT-guide",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-online-research-cheat-sheets-toddington",
+          "name": "Online Research Cheat Sheets - Toddington",
+          "url": "https://www.toddington.com/resources/cheat-sheets/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osint-stash",
+          "name": "OSINT 🔎 STASH",
+          "url": "https://osint.best/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osint-chine-pangar-ban",
+          "name": "OSINT CHINE - Pangar-Ban",
+          "url": "https://start.me/p/7kLY9R/osint-chine",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osint-combine-tools",
+          "name": "OSINT Combine Tools",
+          "url": "https://www.osintcombine.com/tools",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osint-encyclopedia-optiv-cham423",
+          "name": "OSINT Encyclopedia - optiv/cham423",
+          "url": "https://github.com/optiv/OSINT_Encyclopedia",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osint-essentials",
+          "name": "OSINT Essentials",
+          "url": "https://www.osintessentials.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osint-investigation-assistant",
+          "name": "OSINT Investigation Assistant",
+          "url": "https://lambda.black/osint.html",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osint-labs-chinese",
+          "name": "OSINT Labs (Chinese) 开源情报与侦察工具",
+          "url": "https://start.me/p/GE7JQb/osint",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osint-resources-oh-shint",
+          "name": "OSINT Resources - OH SHINT!",
+          "url": "https://ohshint.gitbook.io/oh-shint-its-a-blog/osint-web-resources/introduction-to-osint-web-resources",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osint-link",
+          "name": "Osint.link",
+          "url": "https://osint.link/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osint4all-abesti",
+          "name": "OSINT4ALL - Abesti",
+          "url": "https://start.me/p/L1rEYQ/osint4all",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osint54-start-me",
+          "name": "OSINT54 start.me",
+          "url": "https://start.me/p/q6naJo/osint-links",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osintdojo-resources",
+          "name": "OsintDojo Resources",
+          "url": "https://www.osintdojo.com/resources/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osintgeek-tools",
+          "name": "OSINTgeek | Tools",
+          "url": "https://osintgeek.de/tools",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-osintia-social-media",
+          "name": "Osintia Social Media",
+          "url": "https://start.me/p/4K0DXg/social-media",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-plessas-digital-knowledge-base",
+          "name": "Plessas Digital Knowledge Base",
+          "url": "https://knowledgebase.plessas.net/Digital-Knowledge-Base-78d4cbf53357458785120698da59373f",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-r3mlab-datajournalism-resources",
+          "name": "r3mlab datajournalism-resources",
+          "url": "https://github.com/r3mlab/datajournalism-resources",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-resources-by-country-by-wddadk",
+          "name": "Resources by Country by wddadk",
+          "url": "https://github.com/wddadk/OSINT-for-countries",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-reuser-s-repertorium",
+          "name": "Reuser's Repertorium",
+          "url": "http://rr.reuser.biz/#company%20informationInternational",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-the-cyber-post-osint-tools-resources",
+          "name": "The Cyber Post OSINT Tools & Resources",
+          "url": "https://thecyberpost.com/open-source-intelligence-osint-tools/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-the-osint-rack-mario-santella",
+          "name": "The OSINT Rack – Mario Santella",
+          "url": "https://www.mariosantella.com/the-osint-rack/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-the-osintion-wiki",
+          "name": "The OSINTion Wiki",
+          "url": "https://wiki.theosintion.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-toddington-osint-and-online-research-resources",
+          "name": "Toddington OSINT and Online Research Resources",
+          "url": "https://www.toddington.com/resources/free-osint-resources-open-source-intelligence-search-tools-research-tools-online-investigation/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-uk-osint",
+          "name": "UK-OSINT",
+          "url": "https://www.uk-osint.net/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-uk-osint-2",
+          "name": "UK-OSINT",
+          "url": "https://www.uk-osint.net/index.html",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-v3nari-bookmarks",
+          "name": "V3nari Bookmarks",
+          "url": "https://start.me/p/1kxyw9/v3nari-bookmarks",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "collections-verification-toolset-julia-bayer",
+          "name": "Verification Toolset - Julia Bayer",
+          "url": "https://start.me/p/ZGAzN7/verification-toolset",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "virtual-machines-remote-browsers",
+      "name": "Virtual Machines & Remote Browsers",
+      "order": 88,
+      "tools": [
+        {
+          "id": "virtual-machines-remote-browsers-android-studio-sdk-tools",
+          "name": "Android Studio & SDK tools",
+          "url": "https://developer.android.com/studio",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "virtual-machines-remote-browsers-csi-linux-vm",
+          "name": "CSI Linux VM",
+          "url": "https://csilinux.com/csi-linux-downloads/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "virtual-machines-remote-browsers-kali-linux-vm",
+          "name": "Kali Linux VM",
+          "url": "https://www.kali.org/get-kali/#kali-platforms",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "virtual-machines-remote-browsers-silo-for-research-by-authentic8",
+          "name": "Silo for Research: by Authentic8",
+          "url": "https://www.authentic8.com/experience-silo",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "virtual-machines-remote-browsers-trace-labs-osint-vm",
+          "name": "Trace Labs OSINT VM",
+          "url": "https://www.tracelabs.org/initiatives/osint-vm",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "virtual-machines-remote-browsers-tsurugi-linux-vm",
+          "name": "Tsurugi Linux VM",
+          "url": "https://tsurugi-linux.org/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "podcasts",
+      "name": "Podcasts",
+      "order": 89,
+      "tools": [
+        {
+          "id": "podcasts-darknetdiaries-com",
+          "name": "⭐Darknetdiaries.com",
+          "url": "https://darknetdiaries.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-needlestack-authentic8",
+          "name": "⭐NeedleStack | Authentic8",
+          "url": "https://authentic8.com/needlestack",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-the-pivot-on-apple-podcasts",
+          "name": "⭐‎The Pivot on Apple Podcasts",
+          "url": "https://podcasts.apple.com/us/podcast/the-pivot/id1629913312",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-bellingcatpodcasts-bellingcat",
+          "name": "bellingcatPodcasts - bellingcat",
+          "url": "https://www.bellingcat.com/category/resources/podcasts/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-cloak-dagger-an-osint-podcast",
+          "name": "‎Cloak & Dagger - An OSINT Podcast",
+          "url": "https://podcasts.apple.com/podcast/cloak-dagger-an-osint-podcast/id1685681095",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-cyber-sector-7-hacking-privacy-and-osint",
+          "name": "Cyber Sector 7, Hacking, Privacy, and OSINT",
+          "url": "https://anchor.fm/cyber-sector7/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-cyber-warrior-princess",
+          "name": "‎Cyber Warrior Princess",
+          "url": "https://podcasts.apple.com/us/podcast/cyber-warrior-princess/id1447704787",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-cyber-a-hacking-podcast",
+          "name": "CYBER: A Hacking Podcast",
+          "url": "https://www.vice.com/en_us/article/59vpnx/introducing-cyber-a-hacking-podcast-by-motherboard",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-hackablepodcast-com",
+          "name": "Hackablepodcast.com",
+          "url": "https://hackablepodcast.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-hacking-humans-podcast",
+          "name": "Hacking Humans Podcast",
+          "url": "https://thecyberwire.com/podcasts/hacking-humans",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-janes-the-world-of-intelligence",
+          "name": "Janes - The World of Intelligence",
+          "url": "https://podcast.janes.com/public/68/The-World-of-Intelligence-50487d09",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-layer-8-podcast",
+          "name": "Layer 8 Podcast",
+          "url": "https://anchor.fm/layer-8-podcast",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-malicious-life",
+          "name": "Malicious Life",
+          "url": "https://malicious.life/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-osintcurious-podcast",
+          "name": "OSINTCurious Podcast",
+          "url": "https://anchor.fm/osintcurious",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-pi-perspectives-on-apple-podcasts",
+          "name": "‎PI Perspectives on Apple Podcasts",
+          "url": "https://podcasts.apple.com/us/podcast/pi-perspectives/id1481502619?at=1l3vwYf",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-shadowdragon-io",
+          "name": "shadowdragon.io",
+          "url": "https://podcast.shadowdragon.io/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-social-engineer-podcast",
+          "name": "social-engineer podcast",
+          "url": "https://www.social-engineer.org/category/podcast/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-talking-threat-intelligence",
+          "name": "Talking Threat Intelligence",
+          "url": "https://anchor.fm/liferaftinc/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-techagainstterrorism-fm",
+          "name": "Techagainstterrorism.fm",
+          "url": "https://www.techagainstterrorism.fm/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-the-investigation-game-podcast-workman-forensics",
+          "name": "The Investigation Game Podcast — Workman Forensics",
+          "url": "https://www.workmanforensics.com/the-podcast",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "podcasts-the-osint-bunker",
+          "name": "The OSINT Bunker",
+          "url": "https://rss.com/podcasts/theosintbunker/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "news-rss",
+      "name": "News RSS",
+      "order": 90,
+      "tools": [
+        {
+          "id": "news-rss-sonatype-research-labs-marks-15-years-of-software-supply-chain-intelligence-sonatype15-22",
+          "name": "Sonatype Research Labs Marks 15 Years of Software Supply Chain Intelligence - Sonatype15:22",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZHdCV0wzckgyN1hPRlgxQXpLUmdzU1RYazd3aXdZRGtra3ZwUmR6VFdpODRTekNTNFVZbXJySFZoVW03cjVCWGp1cWN4RzJTbmVCN2JyUXhsMDdfdVA1UXRydmdlMTNCWEwtc2RkTm5kb3NCbW9vU0RQd0RNT19VdG9pSF92VkhSWWFhTU4xczBEVWVhTW9CMNIBqAFBVV95cUxQejZMQWd2bm1pdksxZHVfQmRWUEFfZTdMaE40YWo4dTZINW9rU1VSd3ZqWGtyLWlHblItV1p0ZTNhZEthcTE3NEI5SzBwU0hKWTdOU0FyRklnLVlYMngxZmRkdXgxSVpNdDAtbHFtSW5MMHNYWHJiZmNWcTlVUUprM3p1MzJOdGFEdkgzUERtTl9ENXNFcVktUjBMVHRZcTAyaU1DTDI5SzA?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-dia-expands-ai-osint-efforts-for-cyber-intelligence-missions-executivegov13-juil",
+          "name": "DIA Expands AI, OSINT Efforts for Cyber Intelligence Missions - ExecutiveGov13 juil.",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUjFJN0JmcVNvRUlZWUVDc3J2LWNEVHBIWUVuLXNLbDFZV2lIZVBZT0IzWEozRHZNNnFlbTNfbEs0LWI3UElBdTNUSkxRWFNETVB0ZllwSUhJbS1nRmlGOVg0S1VoWmZldzMtLUV2TGZ4NzZaMFJtTk5QM0hqeU05ZnMzcFBsMFFHZFB2NGRydEF0SEpT?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-an-osint-analyst-has-highlighted-the-aftermath-of-the-drone-attack-on-the-syzran-oil-refinery-in-satellite-im-13-juil",
+          "name": "An OSINT analyst has highlighted the aftermath of the drone attack on the Syzran oil refinery in satellite im - Оборонка • Межа13 juil.",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNTHdlZkxieko0YVh2SnlJOThjMGNUUzRMdGFQWjduMURUNmhoNFZETkt3UTBXTWRGVV9ReDVCVzR1R3JlcFViNTdGdFBBUlExZWhxcXF4N21zQUNhUDdNczFPRkkxdGlyN2NCbmZrM1BOT3JReGxCZzRPbmN3NEdWLVk5eDlHWmZVdXFIOdIBjAFBVV95cUxNTHdlZkxieko0YVh2SnlJOThjMGNUUzRMdGFQWjduMURUNmhoNFZETkt3UTBXTWRGVV9ReDVCVzR1R3JlcFViNTdGdFBBUlExZWhxcXF4N21zQUNhUDdNczFPRkkxdGlyN2NCbmZrM1BOT3JReGxCZzRPbmN3NEdWLVk5eDlHWmZVdXFIOQ?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-the-challenges-opportunities-of-open-source-intelligence-for-cyber-defenders-federal-news-network13-juil",
+          "name": "The challenges, opportunities of open source intelligence for cyber defenders - Federal News Network13 juil.",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdlZ5NnV4ZkM2RlMxc1pURXNRZWM0bnFhczNZRmk2Y2JFRHRxMU1xenNJQkttNUZVMHVMcGZnNFJyMGFrWUJBYWoxLVVvZ0VKZ0lVOXZ6b2U4cExiTExrTmRYWEhpSllSM3g3VUFsT2hKeWxwOEVheXhETldrcnk4UGxRWmhBcXdJa0piR1pGMGZ3MmNmVDhPSXV4MDIwb0RwZ1FwbjZvd3VHOHlQQU1UaDM4bjNaZHFXdzl0cEpyQ19DNTBQRUJITk94aVhjQQ?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-osint-analysis-confirmed-a-fire-at-an-oil-depot-after-a-night-attack-in-the-stavropol-krai-13-juil",
+          "name": "OSINT analysis confirmed a fire at an oil depot after a night attack in the Stavropol Krai - Українські Національні Новини (УНН)13 juil.",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdTZrakJxUWFyNmxoRmM0b1loTzctZW9HSEZCVWlRRGUta2pXTXpFbzBvVlBsNmk4VkJyLXQ0NHRaQm1BeXBVSFJZM0ZlR3BiUzU1UzhubkVUMzZRQWJHWjZ5Q3ZGbDk5WDJtSnZ3Y2RYbDlfRmVVNFJrTkt6Y2REZi1HSkhFQXlaZkZESzBpVEtMVjg1TFItYmRraUd0WWZsWUs1TkZQSXRjOFlmUnZoMTVxWdIBsgFBVV95cUxPZ245M0lyRl9ibEg2cEc5clNLZDVNaDMtdU5KSmlBMzFjaGkyUG14bnlkTVlJTjVtNTlDaXdPMklGN0xBUnAwUlhPNVVSdEtmdVYwLVBFM1VmczBLYmhNUHRQUFRjcWtvQWc1TW5VNHN3UnEwOVFuYjVmVk5aeWZXVTZuaUVfWGhWMUtVWWpQRFdsOFpKdGI3TUNwUllnaDdqeVlKU1IzY1V5eXY5MklOVkFR?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-osint-russian-offensive-west-of-huliaipole-loses-momentum-odessa-journal12-juil",
+          "name": "OSINT: Russian offensive west of Huliaipole loses momentum - Odessa Journal12 juil.",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVFJRbnhxVWhlc08yWDhEbGNWS084VnJvaE1rVkJrR3I4Rmo3bmxEZDlRZFF6VHhPSWl2ZHVZRnBSTGF3N3JBOWJMeENtRldhRWxqeDN0b2RoclFnWkhJcmlkU1lXeDZqeVRzVUdaMjNoeW02bmQzNF9DZEczeDYxVl8zWGh1WjdrNkFNRmI5TWFuTG9tckx0VDJUWG1TQmVmbWYxWHA4UlFadw?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-unmasking-romance-scams-with-osint-mishaal-khan-napoli-l79pn25f1d-mshale12-juil",
+          "name": "Unmasking Romance Scams With OSINT | Mishaal Khan Napoli (L79PN25F1d) - Mshale12 juil.",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA5Y0xzOU55NmhIcEhYbVB6U204eERGdWVfa1Vpc2s1UnNqS0VQLWl1c1ZOWTVZR0djYk1LNTdjaDdEUnZJMlA4NmxVcGpoeFlkY09HQlo1OS1Db2c?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-disrupting-transnational-criminal-networks-using-ai-powered-osint-police111-juil",
+          "name": "Disrupting Transnational Criminal Networks Using AI-Powered OSINT - Police111 juil.",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPV0ZwdEFjS25zd0FVMmtYQ0pzdmQ0SXJxNjZvLWppQ0FIeDJDVThQYnREZUN4VW1SUWY5bS1Hd1laaS0wUnE1c2kxX0JFcTE2QkNzNFVMNE11cV9VWmpoY010N2lCTzZVbTVaR29BVEhDUGZIRGZZVjFoM0NVRmpYSEhkQ3VwZEFtU29zVldQZW53Znd2WGc1MExYa1ZwNzVtSHJZWldpUmtGUm5Ob0hHTnJNWUZoMnJkMXo0?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-the-modern-osint-stack-from-search-tools-to-agentic-intelligence-systems-by-adnan-masood-phd-jul-2026-medium10-juil",
+          "name": "The Modern OSINT Stack: From Search Tools to Agentic Intelligence Systems | by Adnan Masood, PhD. | Jul, 2026 - Medium10 juil.",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMTJ5S0g4RGxmdml4RDNXR191MDZhUTQzZjIyT0t1RlVWUFZBanZyWUM1bUpmeU1uTnVzOGs0QVFjTDc1aFFDR0ZyVEY5WXZzV3VEYnRXZzNWZXBkSklqQzNPbHNsU0FhUzNIRW04bkd4ZXNDY0syVkEzVThhYzA5YzBWSlBTUXR3WVhLMUp5Q3gxVGtPN3dTcWRNZXhpOXNBaEEzZDBfRzZRYTFxMTB2OTA0QUNSbTYz?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-osint-overnight-10-july-strikes-targeted-russia-s-shadow-fleet-tankers-ports-and-ilsky-oil-refinery-photo-10-juil",
+          "name": "OSINT: Overnight 10 July strikes targeted Russia's shadow fleet tankers, ports and Ilsky oil refinery – photo - Українська правда10 juil.",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1FdVBSY25zNjlTa0hHbFJVNXB3RV83clRsSFpqNjJnZkk5VzE0S2NwRzFqZE9XaDVkNXdQSUhGZnp4VDdoYTlVWGNLQjZqdDVQRFA4ZzVzenpUNFdHbE9xbktldXfSAXBBVV95cUxOTGxBNXNiOFpHUTAxcndMMkhWUlJULTNLbkxWWjl0SVBhMWJGSENzUk9GQTNodERVRGtFWjE4OVZGSS1TZ2t0YThjb0duUEVtWlgzVTBjaUF0TktrNTg5SDYyTF9NMWZERVYxUHM0LUx5?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-night-time-attacks-on-10-july-targeted-tankers-belonging-to-russia-s-shadow-fleet-ports-and-the-ilsk-oil-refinery-osint-10-juil",
+          "name": "Night-time attacks on 10 July targeted tankers belonging to Russia's 'shadow fleet', ports and the Ilsk oil refinery – OSINT - Оборонка • Межа10 juil.",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPTzZzZjg1eU83bEZmanRPZDQxVDJsVmdPR24wblBvcDdsUzBEN29FeWozRzJkYmRuLTN4ZWhaRFVTMEZIV2tzT2o2a2RsVHRYUXpfX2NfTC03bWtTYllCYkNZQWttU1pkVEVSdmw4S0ZxTkZIRm1pYVowNzRVSnhJUldDaWE5NzFQaDBWOTlQVjdRdXdnM1lEZUppN00?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-osint-analysts-have-plotted-data-on-attacks-on-factories-on-a-map-of-the-russian-defence-industrial-complex-10-juil",
+          "name": "OSINT analysts have plotted data on attacks on factories on a map of the Russian defence-industrial complex - Оборонка • Межа10 juil.",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNQlRtVGlHbW8wZ0duaDl1QU9zM2YwcFJFWHhocm9GM1NuNThFcGhYcUh0Q0xydDZLY1Y3X2l2TnJRWHhqSVRFdmhLRmFNMzNneG1EUmhUaTBqN01VSC1HUW1sVXJjQWhJc1JSYnBnRFpLUTNOYXJ4Q3pianRKTjM0TGc5U0VYTEFU?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-randy-nixon-janes-interview-on-data-osint-ai-executivebiz10-juil",
+          "name": "Randy Nixon Janes Interview on Data, OSINT, AI - ExecutiveBiz10 juil.",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPaTlob1E2LTh4OU1OaHg0RmQ5NW5nWXdqSUY1MkxEMDcyVEUxWjZ5UFE5RzlpbTR0eHU4X2Z4RnBsTk9ET2JjQjExdHZUUHhseDVXb3dnU3lIYjh3RGNWYTNjX2ZsTGFqajJscjAxVjFXY0pLeHR3dlZKVW5kR0tkNlBzVmNiXzZobWMtRTdNTHNxMzFhNXZR?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-russian-su-35-shot-down-42-kilometers-from-front-line-osint-analysts-suggest-pilot-may-have-been-misled-by-mod-maps-theins-press9-juil",
+          "name": "Russian Su-35 shot down 42 kilometers from front line, OSINT analysts suggest pilot may have been misled by MoD maps - theins.press9 juil.",
+          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5uODdUU2ptV3hwYjVYUGZwQ21iWlBkVkp6QzE4MGItalNWZmhZOG9UUkhMbDRsNG1iYlRwQW90WFg4cjN3enY4ZmFtWQ?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-eyes-in-the-sky-the-new-frontier-of-open-source-nuclear-weapons-analysis-andrew-carnegie-foundation8-juil",
+          "name": "Eyes in the Sky: The New Frontier of Open-Source Nuclear Weapons Analysis - Andrew Carnegie Foundation8 juil.",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQbVo3cmJnTUNMTnNmVlVwM1dTbGdiTzUzZGoyTURRbHF4Q01aSl9HOG9vZE9iS2xLV3Q2ZGJIajdTQ1JpTUw4M1ZSN2QwSW5XLTMwWWt3STlmbHpXOUE2dUM3TU01T2pvUXMyWUk4WmVHbU4tb1Mzemc1VEU0bDdpVXdjQmpxNlZzVHZVSjR0b19peFBLd0o1SmFWS2NsYjZnUmdBUw?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-osint-suggests-ukrainian-drones-attacked-russian-sites-overnight-regions-report-fires-and-casualties-8-juil",
+          "name": "OSINT suggests Ukrainian drones attacked Russian sites overnight, regions report fires and casualties - Межа. Новини України.8 juil.",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE94ekwzQ1FQdFVORFVZZ1pCZnlJeTR4RFlTR1lqYXcwckFwUGZpUEw4NHBob2g5YkUzNTI4UC1obkU1TTlLNThDckdocUR3UWQzb0pxY2NyRDB3T28wYlVBdjRIandGaDlha094WFRFcw?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-drones-strike-saratov-oil-plant-and-borisoglebsk-strategic-sites-overnight-the-new-voice-of-ukraine8-juil",
+          "name": "Drones strike Saratov oil plant and Borisoglebsk strategic sites overnight - The New Voice of Ukraine8 juil.",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPX2dfVVFZVHhyeDVrWGo1S0tBVThiRTZjbnBHOHYtVFc5T3RMbmhRZmdINlpuRzFTTjlNVEF2YzNNaGZQbkU3SWR4RUcwLU9NYmF3REpzNE1tblpkd0w0eUpPZDJnNU5tS3R3eEpXMjFBLTRyb0lMc0htdWpTVzJ6blhzUVpDbGVs0gGEAUFVX3lxTE40UFl2a3cycElnUFFTRV9BM0dqdUhoVXFKVm1RSkFBeGdvV2lkUHJFMFpqV1V6c0h6cXA3ejU0TEljRmxOa0pPcmpfZjJTT1JpbDhTRGlacjFjZTBPd0hzUHoydzVBZkFaNXVLZ3JnMEI0S2UxLU51ZUE4TTRuaTlyWXV2VQ?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-france-lebanon-united-kingdom-international-sos-strikes-big-michael-oatley-dies-osint-in-beirut-intelligence-online8-juil",
+          "name": "France/Lebanon/United Kingdom • International SOS strikes big, Michael Oatley dies, OSINT in Beirut - Intelligence Online8 juil.",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNZGVVMVlZOUVETFl0cTkxb3l6aW5CeVdJU2QyVkpqNlpuNFJ5dFE0UWQ2eGxkU0NrdmJHODNrZlBza2ZCY3JzNWdBcUVCQ1I2LWdXWFMzU1VJekJnZTQ3NHkwQk1NdGUyQmJGZXJQUjRBSDdjV29mWU1fOGZzUHpRZW1jYWI1bjFRZV95REZwX2hvY1JyZTkwN0xGTmgyd0dnU1JlMXFqckZWVUxEVld0MThTY2xUcklibC0zSUpZcmdtTmQ3a2N4d0xXN1hqZw?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-an-osint-analyst-has-shared-satellite-images-showing-the-aftermath-of-the-attack-on-the-omsk-oil-refinery-7-juil",
+          "name": "An OSINT analyst has shared satellite images showing the aftermath of the attack on the Omsk oil refinery - Оборонка • Межа7 juil.",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMDZkRVVpeGRFMEJkZ2JNNERKQWxBX0E5cmJsYnI3OFVzS2NGRHAzNEg1UWtrOC1IQnZ4cmF5TU4wT1MtczJuamxSYnFBT2VOVjB0TEp4Y1Jld3MxLV9jMjlHMTFhaG0xQ295N1BSMnBJVkpKaWpjUjhHUTZrYUI3Q0ZUWWRjaEVHMXfSAY8BQVVfeXFMUDROb3ozX0dUQWFpTHpMZ2VCQ1RKeGxmSGhZQWxmNV85VWZTU1psLXBLbVVPQVBzbGlWTDV0SkZ5dU9RUzhGVFJJYy14aU82TlRYbnA1SHFqNFAxXzB0emF5QjhLcUphSW96Y0FXdjY5RDFrT2pfOTBGcUNONHAwVTF1d2x1R2Z0Yks3MHE1cEk?oc=5",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "news-rss-what-s-osint-hash-values-impeachment-trial-shows-nuances-in-preserving-digital-evidence-rappler7-juil",
+          "name": "What's OSINT, hash values? Impeachment trial shows nuances in preserving digital evidence - Rappler7 juil.",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNmVJWDIxNFlqZS1idkhuQVljOW1BSU16Z3hsMDl1azNjUlpGVTZUYVUwdW5qZFp2WW4zcE9kZERkQWhibXVQTG11ZGx3M1hiR042YkFRdjdHLVZrN3JyZGlvV09jR01rSEJnTkhDbWo4U1NpOWdsR0hmVG00dkhNREdLNEFlLU8yMXByNlphWmdPLUlsSERlbDBjTXF3QQ?oc=5",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "sms-services",
+      "name": "SMS Services",
+      "order": 91,
+      "tools": [
+        {
+          "id": "sms-services-receive-sms-free",
+          "name": "Receive-SMS (free)",
+          "url": "https://receive-sms.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "sms-services-receive-sms-free-2",
+          "name": "Receive SMS (free)",
+          "url": "http://sms.sellaite.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "sms-services-receive-sms-online",
+          "name": "Receive SMS Online",
+          "url": "https://www.receivesmsonline.net/",
+          "notes": null,
+          "addedManually": false
+        }
+      ]
+    },
+    {
+      "id": "date-time",
+      "name": "Date & Time",
+      "order": 92,
+      "tools": [
+        {
+          "id": "date-time-suncalc",
+          "name": "SunCalc",
+          "url": "https://suncalc.org/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-world-time",
+          "name": "World time",
+          "url": "https://www.timeanddate.de/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-sonnenverlauf",
+          "name": "Sonnenverlauf",
+          "url": "https://www.sonnenverlauf.de/#/49.495,11.073,5/2017.11.10/12:52/1/0",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-mooncalc",
+          "name": "Mooncalc",
+          "url": "https://www.mondverlauf.de/#/50.9421,6.9582,17/2018.03.06/21:53/1/2",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-time-converter",
+          "name": "Time converter",
+          "url": "https://www.worldtimebuddy.com/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-shadowcalculator",
+          "name": "ShadowCalculator",
+          "url": "http://shadowcalculator.eu/",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-wind",
+          "name": "Wind",
+          "url": "https://www.windy.com/station/wmo-10384?satellite,52.467,13.400,8",
+          "notes": null,
+          "addedManually": false
+        },
+        {
+          "id": "date-time-shade-map",
+          "name": "Shade Map",
+          "url": "https://shademap.app/",
           "notes": null,
           "addedManually": false
         }
