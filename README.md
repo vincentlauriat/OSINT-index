@@ -50,9 +50,9 @@ d'outils, correction de liens) directement dans ce dépôt.
 data/
 └── osint-tools.json          # catalogue d'outils OSINT (source de vérité)
 OSINTIndex/
-├── OSINTIndexApp.swift       # @main
+├── OSINTIndexApp.swift       # @main (+ SPUStandardUpdaterController sur macOS)
 ├── Models/                   # OsintTool, ToolCategory, Catalog
-├── Services/                 # CatalogLoader (fetch+cache+fallback), FavoritesStore, Keychain
+├── Services/                 # CatalogLoader (fetch+cache+fallback), FavoritesStore
 ├── ViewModels/                # CatalogViewModel (@Observable)
 ├── Views/                     # SwiftUI (liste catégories, liste outils, favoris)
 ├── Localization/               # AppSettings + tables de traduction
@@ -69,12 +69,14 @@ project.yml                    # config XcodeGen
 ## Roadmap
 
 - [x] Bootstrap du projet (squelette SwiftUI macOS + iOS)
-- [ ] Import initial du catalogue depuis osint4all (CC0)
-- [ ] Couche data (fetch GitHub raw + cache + fallback bundle)
-- [ ] UI macOS (liste, recherche, favoris)
-- [ ] Première release macOS signée/notarisée avec auto-update Sparkle
-- [ ] Build iOS vérifié (socle uniquement)
-- [ ] Vérificateur de liens morts
+- [x] Import initial du catalogue depuis osint4all (CC0)
+- [x] Couche data (fetch GitHub raw + cache + fallback bundle)
+- [x] UI macOS (liste, recherche, favoris)
+- [x] Packaging Sparkle (clé EdDSA dédiée, `release.sh` étendu) — première release réelle en
+      attente de la publication du repo GitHub
+- [x] Build iOS vérifié (socle uniquement)
+- [x] Vérificateur de liens morts
+- [ ] Publier le repo GitHub et couper la release `0.1.0`
 - [ ] Décision : soumission App Store iOS ou distribution alternative
 
 ## Licence
