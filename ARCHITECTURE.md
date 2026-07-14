@@ -50,7 +50,7 @@ duplication de fichiers.
 | **App** | Points d'entrée, scènes, injection de `AppSettings` | `OSINTIndexApp.swift` |
 | **Views** | SwiftUI pur, aucune logique réseau | `Views/*.swift` |
 | **ViewModels** | État observable `@MainActor`, orchestration chargement/recherche/favoris | `ViewModels/CatalogViewModel.swift` |
-| **Services** | Accès système/réseau réutilisable | `Services/CatalogLoader.swift`, `Services/FavoritesStore.swift`, `Services/Keychain.swift` |
+| **Services** | Accès système/réseau réutilisable | `Services/CatalogLoader.swift`, `Services/FavoritesStore.swift` |
 | **Models** | Structures `Codable` du catalogue | `Models/OsintTool.swift`, `Models/ToolCategory.swift`, `Models/Catalog.swift` |
 | **Data** | Catalogue source de vérité, versionné dans le repo | `data/osint-tools.json` |
 | **Localization** | Réglages persistés + traduction | `Localization/*.swift` |

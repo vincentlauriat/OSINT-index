@@ -27,7 +27,12 @@ struct ContentView: View {
             detailContent
         }
         .searchable(text: $vm.searchText, placement: .sidebar, prompt: settings.t("search_placeholder"))
-        .task { await vm.load() }
+        .task {
+            await vm.load()
+            if selection == .favorites, vm.favoriteTools.isEmpty, let first = vm.categories.first {
+                selection = .category(first.id)
+            }
+        }
         .alert(settings.t("error_title"), isPresented: Binding(
             get: { vm.errorMessageKey != nil },
             set: { if !$0 { vm.errorMessageKey = nil } }
