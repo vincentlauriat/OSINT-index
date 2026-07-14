@@ -1,6 +1,6 @@
 name: OSINTIndex
 options:
-  bundleIdPrefix: com.example
+  bundleIdPrefix: fr.vincentlauriat
   deploymentTarget:
     macOS: "14.0"
     iOS: "17.0"
@@ -34,6 +34,8 @@ targets:
           - "**/*.entitlements"
           - "Info.plist"
           - "Info-iOS.plist"
+      - path: data/osint-tools.json
+        buildPhase: resources
     settings:
       base:
         PRODUCT_NAME: OSINT-index
@@ -71,6 +73,8 @@ targets:
           - "**/*.entitlements"
           - "Info.plist"
           - "Info-iOS.plist"
+      - path: data/osint-tools.json
+        buildPhase: resources
     settings:
       base:
         PRODUCT_NAME: OSINT-index
