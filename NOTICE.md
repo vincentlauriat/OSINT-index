@@ -15,3 +15,13 @@ lui-même une republication de la page de curation
 À partir de cet import initial, le fichier `data/osint-tools.json` est maintenu manuellement
 dans ce dépôt (ajouts, corrections, suppressions de liens morts) et n'est plus resynchronisé
 automatiquement depuis la source ci-dessus.
+
+## Sources complémentaires
+
+- **[The Ultimate OSINT Collection](https://start.me/p/DPYPMz/the-ultimate-osint-collection)**
+  (curation par hatless1der) — 266 liens fusionnés le 2026-07-14 via
+  [`Scripts/merge_source.py`](Scripts/merge_source.py), répartis sur 13 nouvelles catégories
+  (Books, Communities, LinkedIn Groups, #OSINTforGood, News & Blogs, Newsletters, Training,
+  Webcasts, CTFs, Collections, Virtual Machines, Podcasts, News RSS). Licence de la page source
+  non précisée (pas de CC0 comme osint4all) — liens publics référencés par transparence, pas de
+  republication de contenu.
