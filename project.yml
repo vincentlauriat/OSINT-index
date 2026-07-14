@@ -16,8 +16,13 @@ schemes:
     build:
       targets:
         OSINTIndex: all
+        OSINTIndexTests: [test]
     run:
       config: Debug
+    test:
+      config: Debug
+      targets:
+        - OSINTIndexTests
   OSINTIndexiOS:
     build:
       targets:
@@ -70,6 +75,32 @@ targets:
         SUPublicEDKey: kpUr3fknP2WreS4ilM3wxKrSCa5wzpayDoahd2k/jb4=
         SUEnableAutomaticChecks: true
         SUScheduledCheckInterval: 86400
+
+  # ---------------------------------------------------------------------------
+  # Tests unitaires (macOS uniquement — les Models/Services testés sont partagés
+  # avec iOS mais Foundation-only, pas besoin de dupliquer les tests par plateforme).
+  # ---------------------------------------------------------------------------
+  # Non-hosted (standalone) unit test bundle: compiles the pure Foundation Models/Services
+  # directly rather than depending on the OSINTIndex app target, to avoid TEST_HOST wiring
+  # (which breaks because PRODUCT_NAME "OSINT-index" != target name "OSINTIndex").
+  OSINTIndexTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: OSINTIndexTests
+      - path: OSINTIndex/Models/Catalog.swift
+      - path: OSINTIndex/Models/ToolCategory.swift
+      - path: OSINTIndex/Models/OsintTool.swift
+      - path: OSINTIndex/Services/FavoritesStore.swift
+      - path: data/osint-tools.json
+        buildPhase: resources
+    settings:
+      base:
+        SWIFT_VERSION: "5.9"
+        CODE_SIGN_IDENTITY: ""
+        CODE_SIGNING_REQUIRED: NO
+        CODE_SIGNING_ALLOWED: NO
 
   # ---------------------------------------------------------------------------
   # iOS / iPadOS — codebase partagé avec la cible macOS
