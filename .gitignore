@@ -36,3 +36,11 @@ COMMANDS.md
 MEMORY.md
 PLAN.md
 TODOS.md
+CHANGES.md
+
+# ── Sparkle EdDSA private key backup (never versioned) ────
+Scripts/*.sparkle-keys-backup.txt
+
+# ── Dead-link checker local state/report (regenerated) ─────
+Scripts/.dead-link-state.json
+Scripts/dead-links-report.*
