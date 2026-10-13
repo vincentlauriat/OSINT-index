@@ -1,0 +1,139 @@
+{
+  "name": "OSINT-index",
+  "no": "21",
+  "repo": "vincentlauriat/OSINT-index",
+  "url": "https://vincentlauriat.github.io/OSINT-index/",
+  "accent": "#22d3ee",
+  "meta": {
+    "title": "OSINT-index — a native macOS & iOS index of open source intelligence tools",
+    "description": "A native SwiftUI app for macOS and iOS/iPadOS that indexes 1,700+ publicly available OSINT tools and resources across 90+ categories — browsable, searchable, with local favourites and an offline cache. Free and open source."
+  },
+  "role": {
+    "en": "Native SwiftUI app · macOS · iOS · iPadOS",
+    "fr": "App SwiftUI native · macOS · iOS · iPadOS",
+    "zh": "原生 SwiftUI 應用程式 · macOS · iOS · iPadOS"
+  },
+  "thesis": {
+    "en": "An index for open source intelligence",
+    "fr": "Un index pour le renseignement en sources ouvertes",
+    "zh": "一份開源情報的索引"
+  },
+  "lede": {
+    "en": "OSINT-index is a native SwiftUI app that turns a sprawling catalogue of publicly available research tools into something you can actually browse, search and keep — offline, on your Mac and on your iPhone or iPad.",
+    "fr": "OSINT-index est une app SwiftUI native qui transforme un catalogue tentaculaire d'outils de recherche publics en quelque chose que l'on peut vraiment parcourir, rechercher et garder — hors ligne, sur votre Mac et sur votre iPhone ou iPad.",
+    "zh": "OSINT-index 是一款原生 SwiftUI 應用程式，把龐雜的公開研究工具目錄，變成你真正能瀏覽、搜尋與保存的東西——離線也能用，在 Mac 上，也在 iPhone 或 iPad 上。"
+  },
+  "actions": [
+    {"primary": true, "href": "https://github.com/vincentlauriat/OSINT-index",
+     "label": {"en": "View on GitHub", "fr": "Voir sur GitHub", "zh": "在 GitHub 上檢視"}},
+    {"href": "#build",
+     "label": {"en": "Build from source", "fr": "Compiler depuis les sources", "zh": "從原始碼建置"}}
+  ],
+  "facts": [
+    {"k": {"en": "Tools indexed", "fr": "Outils indexés", "zh": "已索引工具"}, "v": "1,700+"},
+    {"k": {"en": "Categories", "fr": "Catégories", "zh": "分類"}, "v": "90+"},
+    {"k": {"en": "Offline capable", "fr": "Fonctionne hors ligne", "zh": "離線可用"}, "v": "100%"},
+    {"k": {"en": "Requires", "fr": "Configuration", "zh": "系統需求"}, "v": {"en": "macOS 14+ and iOS/iPadOS 17+", "fr": "macOS 14+ et iOS/iPadOS 17+", "zh": "macOS 14+ 與 iOS/iPadOS 17+"}},
+    {"k": {"en": "Interface", "fr": "Interface", "zh": "介面"}, "v": {"en": "English &amp; French", "fr": "Anglais et français", "zh": "英文與法文"}},
+    {"k": {"en": "Licence", "fr": "Licence", "zh": "授權"}, "v": {"en": "Free &amp; open source (MIT) · open dataset", "fr": "Gratuit et open source (MIT) · jeu de données ouvert", "zh": "免費開源（MIT）· 開放資料集"}}
+  ],
+  "opener": {
+    "h": {"en": "Features", "fr": "Fonctionnalités", "zh": "功能"}
+  },
+  "features": [
+    {"h": {"en": "Category navigation", "fr": "Navigation par catégories", "zh": "分類瀏覽"},
+     "p": {"en": "A three-column <code>NavigationSplitView</code> on macOS and iPadOS, adapting to a stack on iPhone: categories on the left, tools in the middle, details on the right.",
+           "fr": "Un <code>NavigationSplitView</code> à trois colonnes sur macOS et iPadOS, qui devient une pile sur iPhone : catégories à gauche, outils au milieu, détails à droite.",
+           "zh": "在 macOS 與 iPadOS 上是三欄式 <code>NavigationSplitView</code>，在 iPhone 上則改為堆疊式：左邊是分類，中間是工具，右邊是詳細資訊。"}},
+    {"h": {"en": "Full-text search", "fr": "Recherche plein texte", "zh": "全文搜尋"},
+     "p": {"en": "Filter the whole catalogue as you type, across both tool names and category names — no need to remember which of the 90+ sections a resource was filed under.",
+           "fr": "Filtrez tout le catalogue au fil de la frappe, sur les noms d'outils comme sur les noms de catégories — inutile de se rappeler dans laquelle des 90+ sections une ressource a été rangée.",
+           "zh": "邊打字邊過濾整份目錄，同時比對工具名稱與分類名稱——不必記得某個資源被歸在 90 多個分類中的哪一個。"}},
+    {"h": {"en": "Local favourites", "fr": "Favoris locaux", "zh": "本機收藏"},
+     "p": {"en": "Star the tools you actually use. Favourites are stored on device, get their own section, and survive catalogue refreshes and app updates.",
+           "fr": "Mettez une étoile aux outils que vous utilisez vraiment. Les favoris sont stockés sur l'appareil, ont leur propre section et survivent aux rafraîchissements du catalogue comme aux mises à jour de l'app.",
+           "zh": "為你真正會用的工具加上星號。收藏儲存在裝置上，有自己的專屬區塊，並能在目錄更新與 App 更新後保留下來。"}},
+    {"h": {"en": "Refresh &amp; offline cache", "fr": "Rafraîchissement et cache hors ligne", "zh": "更新與離線快取"},
+     "p": {"en": "Pull the latest catalogue straight from GitHub, cache it locally, and fall back to the version bundled with the app — so it keeps working with no network at all.",
+           "fr": "Récupérez le dernier catalogue directement depuis GitHub, mettez-le en cache localement, avec repli sur la version embarquée dans l'app — pour que tout continue de fonctionner sans aucun réseau.",
+           "zh": "直接從 GitHub 拉取最新目錄、快取在本機，並可退回 App 內建的版本——因此完全沒有網路也能繼續使用。"}},
+    {"h": {"en": "Bilingual &amp; theme-aware", "fr": "Bilingue et sensible au thème", "zh": "雙語並支援主題"},
+     "p": {"en": "English and French interface, following the system language or set explicitly, plus light, dark and system appearance modes.",
+           "fr": "Interface en anglais et en français, qui suit la langue du système ou se règle explicitement, plus les modes d'apparence clair, sombre et système.",
+           "zh": "英文與法文介面，可跟隨系統語言或手動指定，另有淺色、深色與跟隨系統三種外觀模式。"}},
+    {"h": {"en": "Sparkle auto-updates", "fr": "Mises à jour automatiques Sparkle", "zh": "Sparkle 自動更新"},
+     "p": {"en": "The macOS build ships with Sparkle, so signed and notarised releases install themselves once a build is published.",
+           "fr": "La version macOS embarque Sparkle : les releases signées et notariées s'installent d'elles-mêmes dès qu'une version est publiée.",
+           "zh": "macOS 版內建 Sparkle，因此只要一發布新版本，經簽章與公證的版本就會自行安裝。"}}
+  ],
+  "chapters": [
+    {
+      "id": "what",
+      "h": {"en": "What it is", "fr": "Ce que c'est", "zh": "這是什麼"},
+      "blocks": [
+        {"type": "p", "t": {
+          "en": "OSINT — open source intelligence — is research carried out from publicly available sources. The tools that support it are scattered across hundreds of bookmark pages, gists and wikis. OSINT-index collects them into a single versioned catalogue and wraps it in a native app, so finding the right resource is a search box away rather than an afternoon of link-chasing. It is an index of public references for researchers, journalists and students: it points to tools, it does not run them.",
+          "fr": "L'OSINT — renseignement en sources ouvertes — est une recherche menée à partir de sources accessibles au public. Les outils qui la servent sont éparpillés sur des centaines de pages de favoris, de gists et de wikis. OSINT-index les rassemble dans un catalogue unique et versionné, enveloppé dans une app native : trouver la bonne ressource tient dans un champ de recherche plutôt que dans un après-midi à courir après des liens. C'est un index de références publiques pour chercheurs, journalistes et étudiants : il pointe vers des outils, il ne les exécute pas.",
+          "zh": "OSINT——開源情報——是根據公開可得的來源所進行的研究。支援這類研究的工具散落在數百個書籤頁、gist 與 wiki 之中。OSINT-index 把它們彙整成一份有版本管理的目錄，並包裝成原生 App，讓你只需一個搜尋框就能找到合適的資源，而不必花一整個下午追連結。這是一份為研究人員、記者與學生準備的公開參考索引：它指向工具，但不執行工具。"}},
+        {"type": "p", "t": {
+          "en": "People &amp; username search · Social media · Maps &amp; geolocation · Domains / IP / DNS · Cryptocurrency · Darknet · Public records · Search engines &amp; dorking · Image, video &amp; media · Flight &amp; maritime tracking · Threat intel · Training &amp; CTFs",
+          "fr": "Recherche de personnes et de pseudos · Réseaux sociaux · Cartes et géolocalisation · Domaines / IP / DNS · Cryptomonnaies · Darknet · Registres publics · Moteurs de recherche et dorking · Image, vidéo et médias · Suivi aérien et maritime · Threat intel · Formation et CTF",
+          "zh": "人物與使用者名稱搜尋 · 社群媒體 · 地圖與地理定位 · 網域／IP／DNS · 加密貨幣 · 暗網 · 公開紀錄 · 搜尋引擎與 dorking · 圖像、影片與媒體 · 航班與船舶追蹤 · 威脅情資 · 訓練與 CTF"}}
+      ]
+    },
+    {
+      "id": "dataset",
+      "h": {"en": "The dataset", "fr": "Le jeu de données", "zh": "資料集"},
+      "blocks": [
+        {"type": "p", "t": {
+          "en": "Everything the app displays comes from a single versioned file, <code>data/osint-tools.json</code>, living in the repository — readable, diffable, and reusable outside the app.",
+          "fr": "Tout ce que l'app affiche provient d'un unique fichier versionné, <code>data/osint-tools.json</code>, qui vit dans le dépôt — lisible, comparable et réutilisable hors de l'app.",
+          "zh": "App 顯示的一切都來自儲存庫中的單一版本化檔案 <code>data/osint-tools.json</code>——可閱讀、可比對差異，也能在 App 之外重複使用。"}},
+        {"type": "p", "t": {
+          "en": "<b>Origin.</b> The initial import came from <a href=\"https://github.com/osint4all/osint4all.github.io\">osint4all</a>, published under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0 1.0</a> (public domain, no attribution required — credited here for transparency). A later pass merged 266 further public links from <a href=\"https://start.me/p/DPYPMz/the-ultimate-osint-collection\">The Ultimate OSINT Collection</a>; that page carries no stated licence, so those entries are referenced as links rather than republished as content. Full details in <a href=\"https://github.com/vincentlauriat/OSINT-index/blob/main/NOTICE.md\">NOTICE.md</a>.",
+          "fr": "<b>Origine.</b> L'import initial vient d'<a href=\"https://github.com/osint4all/osint4all.github.io\">osint4all</a>, publié sous <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0 1.0</a> (domaine public, sans attribution requise — crédité ici par transparence). Un passage ultérieur a fusionné 266 liens publics supplémentaires issus de <a href=\"https://start.me/p/DPYPMz/the-ultimate-osint-collection\">The Ultimate OSINT Collection</a> ; cette page n'indique aucune licence, ces entrées sont donc référencées comme liens plutôt que republiées comme contenu. Tous les détails dans <a href=\"https://github.com/vincentlauriat/OSINT-index/blob/main/NOTICE.md\">NOTICE.md</a>.",
+          "zh": "<b>來源。</b>最初的匯入來自 <a href=\"https://github.com/osint4all/osint4all.github.io\">osint4all</a>，以 <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0 1.0</a> 發布（公有領域，無須標示出處——在此註明是為了透明）。之後又合併了來自 <a href=\"https://start.me/p/DPYPMz/the-ultimate-osint-collection\">The Ultimate OSINT Collection</a> 的 266 個公開連結；該頁面未標示任何授權，因此這些項目僅以連結形式參照，而不轉載其內容。完整說明見 <a href=\"https://github.com/vincentlauriat/OSINT-index/blob/main/NOTICE.md\">NOTICE.md</a>。"}},
+        {"type": "p", "t": {
+          "en": "<b>Maintenance.</b> Past the initial import the file is curated by hand in the repo — tools added, links corrected, dead entries removed. A dead-link checker (<code>Scripts/check_dead_links.py</code>) runs over the catalogue and reports what has rotted.",
+          "fr": "<b>Maintenance.</b> Après l'import initial, le fichier est entretenu à la main dans le dépôt — outils ajoutés, liens corrigés, entrées mortes supprimées. Un vérificateur de liens morts (<code>Scripts/check_dead_links.py</code>) parcourt le catalogue et signale ce qui a pourri.",
+          "zh": "<b>維護。</b>初次匯入之後，這個檔案在儲存庫中以人工整理——新增工具、修正連結、移除失效項目。失效連結檢查器（<code>Scripts/check_dead_links.py</code>）會掃過整份目錄，回報哪些已經失效。"}},
+        {"type": "p", "t": {
+          "en": "<b>Reuse.</b> The app code is MIT. The catalogue is a plain JSON document you can fetch, parse and build on without touching the app at all.",
+          "fr": "<b>Réutilisation.</b> Le code de l'app est sous MIT. Le catalogue est un simple document JSON que vous pouvez récupérer, analyser et exploiter sans jamais toucher à l'app.",
+          "zh": "<b>重複使用。</b>App 程式碼採 MIT 授權。目錄是一份純 JSON 文件，你可以直接取得、解析並以此為基礎開發，完全不必動到 App。"}}
+      ]
+    },
+    {
+      "id": "build",
+      "h": {"en": "Build from source", "fr": "Compiler depuis les sources", "zh": "從原始碼建置"},
+      "p": {
+        "en": "Requires Xcode 15+ and <a href=\"https://github.com/yonaskolb/XcodeGen\">XcodeGen</a>.",
+        "fr": "Nécessite Xcode 15+ et <a href=\"https://github.com/yonaskolb/XcodeGen\">XcodeGen</a>.",
+        "zh": "需要 Xcode 15+ 與 <a href=\"https://github.com/yonaskolb/XcodeGen\">XcodeGen</a>。"
+      },
+      "blocks": [
+        {"type": "pre", "code": "brew install xcodegen\ngit clone https://github.com/vincentlauriat/OSINT-index.git\ncd OSINT-index\nxcodegen generate            # generates OSINTIndex.xcodeproj\nopen OSINTIndex.xcodeproj    # macOS: scheme OSINTIndex — iOS: scheme OSINTIndexiOS"},
+        {"type": "p", "t": {
+          "en": "One SwiftUI codebase drives both platforms: models and services are shared, only the platform-specific pieces (Sparkle on macOS, the navigation chrome) differ. See <a href=\"https://github.com/vincentlauriat/OSINT-index/blob/main/ARCHITECTURE_EN.md\">ARCHITECTURE_EN.md</a> for the layer breakdown.",
+          "fr": "Une seule base de code SwiftUI pilote les deux plateformes : modèles et services sont partagés, seules les pièces propres à chaque plateforme (Sparkle sur macOS, l'habillage de navigation) diffèrent. Voir <a href=\"https://github.com/vincentlauriat/OSINT-index/blob/main/ARCHITECTURE_EN.md\">ARCHITECTURE_EN.md</a> pour le découpage en couches.",
+          "zh": "同一套 SwiftUI 程式碼驅動兩個平台：模型與服務共用，只有平台專屬的部分（macOS 上的 Sparkle、導覽外框）不同。分層說明請見 <a href=\"https://github.com/vincentlauriat/OSINT-index/blob/main/ARCHITECTURE_EN.md\">ARCHITECTURE_EN.md</a>。"}},
+        {"type": "p", "t": {
+          "en": "No binary release has been published yet, and the iOS app is not on the App Store — building from source is currently the way to run it. The macOS release pipeline (signed, notarised DMG with a Sparkle appcast) is in place and waiting on the first tagged version.",
+          "fr": "Aucune release binaire n'a encore été publiée, et l'app iOS n'est pas sur l'App Store — compiler depuis les sources est pour l'instant le moyen de la faire tourner. Le pipeline de release macOS (DMG signé et notarié avec un appcast Sparkle) est en place et attend la première version taguée.",
+          "zh": "目前尚未發布任何二進位版本，iOS App 也不在 App Store 上——現階段要執行它，就得從原始碼建置。macOS 的發行流程（經簽章與公證的 DMG，搭配 Sparkle appcast）已經就緒，正等待第一個標記版本。"}}
+      ]
+    }
+  ],
+  "close": {
+    "h": {"en": "Browse, search and keep", "fr": "Parcourir, rechercher et garder", "zh": "瀏覽、搜尋與保存"},
+    "p": {"en": "Free &amp; open source (MIT) · macOS 14+ and iOS/iPadOS 17+ · English &amp; French UI · open dataset",
+          "fr": "Gratuit et open source (MIT) · macOS 14+ et iOS/iPadOS 17+ · interface anglaise et française · jeu de données ouvert",
+          "zh": "免費開源（MIT）· macOS 14+ 與 iOS/iPadOS 17+ · 英文與法文介面 · 開放資料集"},
+    "actions": [
+      {"primary": true, "href": "https://github.com/vincentlauriat/OSINT-index",
+       "label": {"en": "View on GitHub", "fr": "Voir sur GitHub", "zh": "在 GitHub 上檢視"}},
+      {"href": "#build",
+       "label": {"en": "Build from source", "fr": "Compiler depuis les sources", "zh": "從原始碼建置"}}
+    ]
+  }
+}

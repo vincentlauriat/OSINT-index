@@ -1,236 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="--accent:#22d3ee;--on-accent:#141414;--accent-ink:#0a7686">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OSINT-index — a native macOS &amp; iOS index of open source intelligence tools</title>
 <meta name="description" content="A native SwiftUI app for macOS and iOS/iPadOS that indexes 1,700+ publicly available OSINT tools and resources across 90+ categories — browsable, searchable, with local favourites and an offline cache. Free and open source.">
+<meta name="theme-color" content="#eff1f2">
 <meta property="og:type" content="website">
 <meta property="og:title" content="OSINT-index — a native macOS &amp; iOS index of open source intelligence tools">
-<meta property="og:description" content="1,700+ publicly available OSINT tools and resources across 90+ categories, in a native SwiftUI app for macOS and iOS/iPadOS. Browsable, searchable, offline-capable. Free and open source.">
+<meta property="og:description" content="A native SwiftUI app for macOS and iOS/iPadOS that indexes 1,700+ publicly available OSINT tools and resources across 90+ categories — browsable, searchable, with local favourites and an offline cache. Free and open source.">
 <meta property="og:url" content="https://vincentlauriat.github.io/OSINT-index/">
-<meta name="twitter:card" content="summary">
-<style>
-  :root {
-    --bg: #080c14;
-    --bg-card: #101725;
-    --bg-soft: #0c121d;
-    --text: #e6edf7;
-    --muted: #93a2ba;
-    --accent: #22d3ee;
-    --accent-dim: #0e7490;
-    --border: #1d2839;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: var(--bg);
-    background-image:
-      radial-gradient(900px 500px at 50% -8%, rgba(34,211,238,.13), transparent 70%),
-      linear-gradient(rgba(34,211,238,.028) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34,211,238,.028) 1px, transparent 1px);
-    background-size: auto, 46px 46px, 46px 46px;
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-  header { text-align: center; padding: 96px 0 8px; }
-  .eyebrow {
-    display: inline-block; font-size: .74rem; letter-spacing: .16em; text-transform: uppercase;
-    color: var(--accent); border: 1px solid var(--border); background: var(--bg-soft);
-    border-radius: 999px; padding: 5px 16px; margin-bottom: 26px; font-weight: 600;
-  }
-  h1 { font-size: 2.9rem; margin: 0 0 14px; letter-spacing: -.03em; line-height: 1.12; }
-  h1 .em { color: var(--accent); }
-  .tagline { font-size: 1.2rem; color: var(--muted); max-width: 660px; margin: 0 auto; }
-  .buttons { margin: 34px 0 10px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .btn {
-    display: inline-block; padding: 13px 26px; border-radius: 12px;
-    font-weight: 600; text-decoration: none; font-size: 1.02rem;
-    transition: transform .12s ease, box-shadow .12s ease;
-  }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-primary { background: var(--accent); color: #04222b; box-shadow: 0 6px 26px rgba(34,211,238,.32); }
-  .btn-secondary { background: var(--bg-card); color: var(--text); border: 1px solid var(--border); }
-  .fineprint { color: var(--muted); font-size: .88rem; }
-  .stats {
-    display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
-    margin: 52px 0 0;
-  }
-  .stat {
-    background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
-    padding: 20px 30px; min-width: 168px;
-  }
-  .stat .n { display: block; font-size: 1.85rem; font-weight: 700; color: var(--accent); letter-spacing: -.02em; line-height: 1.2; }
-  .stat .l { font-size: .82rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
-  section { padding: 62px 0 8px; }
-  h2 { font-size: 1.7rem; margin-bottom: 8px; letter-spacing: -.02em; }
-  h2 .em { color: var(--accent); }
-  .lede { color: var(--muted); margin-bottom: 22px; max-width: 720px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); gap: 16px; }
-  .card {
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 20px 22px;
-  }
-  .card h3 { font-size: 1.05rem; margin-bottom: 6px; }
-  .card p { color: var(--muted); font-size: .95rem; }
-  .panel {
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 24px 26px; margin-top: 4px;
-  }
-  .panel p + p { margin-top: 12px; }
-  .panel p { color: var(--muted); }
-  .panel strong { color: var(--text); }
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 0; }
-  .tag {
-    font-size: .82rem; color: var(--muted); background: var(--bg-soft);
-    border: 1px solid var(--border); border-radius: 8px; padding: 5px 12px;
-  }
-  .note {
-    border-left: 3px solid var(--accent-dim); background: var(--bg-soft);
-    border-radius: 0 10px 10px 0; padding: 14px 18px; margin-top: 22px;
-    color: var(--muted); font-size: .93rem;
-  }
-  code, pre {
-    font-family: "SF Mono", ui-monospace, Menlo, monospace;
-    background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
-  }
-  code { padding: 2px 7px; font-size: .9em; }
-  pre { padding: 18px 20px; overflow-x: auto; margin: 16px 0; }
-  pre code { background: none; border: none; padding: 0; }
-  .cmt { color: #5f7089; }
-  a { color: var(--accent); }
-  footer { text-align: center; padding: 68px 0 44px; color: var(--muted); font-size: .9rem; }
-  footer a { color: var(--muted); }
-  @media (max-width: 600px) {
-    header { padding-top: 64px; }
-    h1 { font-size: 2.15rem; }
-    .tagline { font-size: 1.06rem; }
-    .stat { padding: 16px 22px; min-width: 140px; }
-  }
-</style>
+
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="/assets/schibsted.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/monograph/v1/monograph.css">
+
 </head>
 <body>
-
-<header class="wrap">
-  <span class="eyebrow">macOS · iOS · iPadOS</span>
-  <h1>An index for <span class="em">open source intelligence</span></h1>
-  <p class="tagline">OSINT-index is a native SwiftUI app that turns a sprawling catalogue of publicly
-  available research tools into something you can actually browse, search and keep — offline, on your
-  Mac and on your iPhone or iPad.</p>
-  <div class="buttons">
-    <a class="btn btn-primary" href="https://github.com/vincentlauriat/OSINT-index">View on GitHub</a>
-    <a class="btn btn-secondary" href="#build">Build from source</a>
-  </div>
-  <p class="fineprint">Free &amp; open source (MIT) · macOS 14+ and iOS/iPadOS 17+ · English &amp; French UI · open dataset</p>
-  <div class="stats">
-    <div class="stat"><span class="n">1,700+</span><span class="l">Tools indexed</span></div>
-    <div class="stat"><span class="n">90+</span><span class="l">Categories</span></div>
-    <div class="stat"><span class="n">100%</span><span class="l">Offline capable</span></div>
-  </div>
-</header>
-
-<section class="wrap">
-  <h2>What it is</h2>
-  <p class="lede">OSINT — open source intelligence — is research carried out from publicly available
-  sources. The tools that support it are scattered across hundreds of bookmark pages, gists and wikis.
-  OSINT-index collects them into a single versioned catalogue and wraps it in a native app, so finding
-  the right resource is a search box away rather than an afternoon of link-chasing. It is an index of
-  public references for researchers, journalists and students: it points to tools, it does not run them.</p>
-  <div class="tags">
-    <span class="tag">People &amp; username search</span>
-    <span class="tag">Social media</span>
-    <span class="tag">Maps &amp; geolocation</span>
-    <span class="tag">Domains / IP / DNS</span>
-    <span class="tag">Cryptocurrency</span>
-    <span class="tag">Darknet</span>
-    <span class="tag">Public records</span>
-    <span class="tag">Search engines &amp; dorking</span>
-    <span class="tag">Image, video &amp; media</span>
-    <span class="tag">Flight &amp; maritime tracking</span>
-    <span class="tag">Threat intel</span>
-    <span class="tag">Training &amp; CTFs</span>
-  </div>
-</section>
-
-<section class="wrap">
-  <h2>Features</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>🗂️ Category navigation</h3>
-      <p>A three-column <code>NavigationSplitView</code> on macOS and iPadOS, adapting to a stack on
-      iPhone: categories on the left, tools in the middle, details on the right.</p>
-    </div>
-    <div class="card">
-      <h3>🔎 Full-text search</h3>
-      <p>Filter the whole catalogue as you type, across both tool names and category names — no need to
-      remember which of the 90+ sections a resource was filed under.</p>
-    </div>
-    <div class="card">
-      <h3>⭐ Local favourites</h3>
-      <p>Star the tools you actually use. Favourites are stored on device, get their own section, and
-      survive catalogue refreshes and app updates.</p>
-    </div>
-    <div class="card">
-      <h3>📡 Refresh &amp; offline cache</h3>
-      <p>Pull the latest catalogue straight from GitHub, cache it locally, and fall back to the version
-      bundled with the app — so it keeps working with no network at all.</p>
-    </div>
-    <div class="card">
-      <h3>🌓 Bilingual &amp; theme-aware</h3>
-      <p>English and French interface, following the system language or set explicitly, plus light, dark
-      and system appearance modes.</p>
-    </div>
-    <div class="card">
-      <h3>🔄 Sparkle auto-updates</h3>
-      <p>The macOS build ships with Sparkle, so signed and notarised releases install themselves once a
-      build is published.</p>
-    </div>
-  </div>
-</section>
-
-<section class="wrap">
-  <h2>The <span class="em">dataset</span></h2>
-  <div class="panel">
-    <p>Everything the app displays comes from a single versioned file, <code>data/osint-tools.json</code>,
-    living in the repository — readable, diffable, and reusable outside the app.</p>
-    <p><strong>Origin.</strong> The initial import came from
-    <a href="https://github.com/osint4all/osint4all.github.io">osint4all</a>, published under
-    <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> (public domain, no
-    attribution required — credited here for transparency). A later pass merged 266 further public links
-    from <a href="https://start.me/p/DPYPMz/the-ultimate-osint-collection">The Ultimate OSINT
-    Collection</a>; that page carries no stated licence, so those entries are referenced as links rather
-    than republished as content. Full details in
-    <a href="https://github.com/vincentlauriat/OSINT-index/blob/main/NOTICE.md">NOTICE.md</a>.</p>
-    <p><strong>Maintenance.</strong> Past the initial import the file is curated by hand in the repo —
-    tools added, links corrected, dead entries removed. A dead-link checker
-    (<code>Scripts/check_dead_links.py</code>) runs over the catalogue and reports what has rotted.</p>
-    <p><strong>Reuse.</strong> The app code is MIT. The catalogue is a plain JSON document you can fetch,
-    parse and build on without touching the app at all.</p>
-  </div>
-</section>
-
-<section class="wrap" id="build">
-  <h2>Build from source</h2>
-  <p class="lede">Requires Xcode 15+ and <a href="https://github.com/yonaskolb/XcodeGen">XcodeGen</a>.</p>
-<pre><code>brew install xcodegen
+<a class="skip" href="#content"><span class="en">Skip to content</span><span class="fr">Aller au contenu</span><span class="zh">跳至內容</span></a>
+<header class="running"><div class="wrap">
+<a class="back" href="https://vincentlauriat.github.io/#w21"><svg class="arw l" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg><span class="en">Vincent Lauriat</span><span class="fr">Vincent Lauriat</span><span class="zh">Vincent Lauriat</span></a>
+<span class="here"><span class="num">21</span> · OSINT-index</span>
+<div class="langs" role="group" aria-label="Language / Langue / 語言"><button type="button" data-lang="en" aria-pressed="false">EN</button><button type="button" data-lang="fr" aria-pressed="false">FR</button><button type="button" data-lang="zh" aria-pressed="false">中文</button></div>
+<a class="gh" href="https://github.com/vincentlauriat/OSINT-index">GitHub</a>
+</div></header>
+<main>
+<section class="title"><div class="wrap g12">
+<h1 class="nm" style="--len:11"><span class="no" aria-label="Work no. 21">21</span><span>OSINT-index</span></h1>
+<p class="role"><span class="en">Native SwiftUI app · macOS · iOS · iPadOS</span><span class="fr">App SwiftUI native · macOS · iOS · iPadOS</span><span class="zh">原生 SwiftUI 應用程式 · macOS · iOS · iPadOS</span></p>
+<div class="t-left">
+<p class="thesis"><span class="en">An index for open source intelligence</span><span class="fr">Un index pour le renseignement en sources ouvertes</span><span class="zh">一份開源情報的索引</span></p>
+<p class='lede'><span class="en">OSINT-index is a native SwiftUI app that turns a sprawling catalogue of publicly available research tools into something you can actually browse, search and keep — offline, on your Mac and on your iPhone or iPad.</span><span class="fr">OSINT-index est une app SwiftUI native qui transforme un catalogue tentaculaire d'outils de recherche publics en quelque chose que l'on peut vraiment parcourir, rechercher et garder — hors ligne, sur votre Mac et sur votre iPhone ou iPad.</span><span class="zh">OSINT-index 是一款原生 SwiftUI 應用程式，把龐雜的公開研究工具目錄，變成你真正能瀏覽、搜尋與保存的東西——離線也能用，在 Mac 上，也在 iPhone 或 iPad 上。</span></p>
+<div class="acts"><a class="btn" href="https://github.com/vincentlauriat/OSINT-index"><span class="en">View on GitHub</span><span class="fr">Voir sur GitHub</span><span class="zh">在 GitHub 上檢視</span></a><a class="lnk" href="#build"><span class="en">Build from source</span><span class="fr">Compiler depuis les sources</span><span class="zh">從原始碼建置</span><svg class="arw" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
+<dl class="facts"><div><dt><span class="en">Tools indexed</span><span class="fr">Outils indexés</span><span class="zh">已索引工具</span></dt><dd>1,700+</dd></div><div><dt><span class="en">Categories</span><span class="fr">Catégories</span><span class="zh">分類</span></dt><dd>90+</dd></div><div><dt><span class="en">Offline capable</span><span class="fr">Fonctionne hors ligne</span><span class="zh">離線可用</span></dt><dd>100%</dd></div><div><dt><span class="en">Requires</span><span class="fr">Configuration</span><span class="zh">系統需求</span></dt><dd><span class="en">macOS 14+ and iOS/iPadOS 17+</span><span class="fr">macOS 14+ et iOS/iPadOS 17+</span><span class="zh">macOS 14+ 與 iOS/iPadOS 17+</span></dd></div><div><dt><span class="en">Interface</span><span class="fr">Interface</span><span class="zh">介面</span></dt><dd><span class="en">English &amp; French</span><span class="fr">Anglais et français</span><span class="zh">英文與法文</span></dd></div><div><dt><span class="en">Licence</span><span class="fr">Licence</span><span class="zh">授權</span></dt><dd><span class="en">Free &amp; open source (MIT) · open dataset</span><span class="fr">Gratuit et open source (MIT) · jeu de données ouvert</span><span class="zh">免費開源（MIT）· 開放資料集</span></dd></div></dl>
+</div>
+<div class="t-right"></div>
+</div></section>
+<section class="opener" id="content"><div class="wrap"><div class="op-grid"><div class="numeral" aria-hidden="true">21</div><div class="op-text"><h2><span class="en">Features</span><span class="fr">Fonctionnalités</span><span class="zh">功能</span></h2></div></div></div></section>
+<section class="chapter"><div class="wrap"><ul class="specs"><li><h3><span class="en">Category navigation</span><span class="fr">Navigation par catégories</span><span class="zh">分類瀏覽</span></h3><div><p><span class="en">A three-column <code>NavigationSplitView</code> on macOS and iPadOS, adapting to a stack on iPhone: categories on the left, tools in the middle, details on the right.</span><span class="fr">Un <code>NavigationSplitView</code> à trois colonnes sur macOS et iPadOS, qui devient une pile sur iPhone : catégories à gauche, outils au milieu, détails à droite.</span><span class="zh">在 macOS 與 iPadOS 上是三欄式 <code>NavigationSplitView</code>，在 iPhone 上則改為堆疊式：左邊是分類，中間是工具，右邊是詳細資訊。</span></p></div></li><li><h3><span class="en">Full-text search</span><span class="fr">Recherche plein texte</span><span class="zh">全文搜尋</span></h3><div><p><span class="en">Filter the whole catalogue as you type, across both tool names and category names — no need to remember which of the 90+ sections a resource was filed under.</span><span class="fr">Filtrez tout le catalogue au fil de la frappe, sur les noms d'outils comme sur les noms de catégories — inutile de se rappeler dans laquelle des 90+ sections une ressource a été rangée.</span><span class="zh">邊打字邊過濾整份目錄，同時比對工具名稱與分類名稱——不必記得某個資源被歸在 90 多個分類中的哪一個。</span></p></div></li><li><h3><span class="en">Local favourites</span><span class="fr">Favoris locaux</span><span class="zh">本機收藏</span></h3><div><p><span class="en">Star the tools you actually use. Favourites are stored on device, get their own section, and survive catalogue refreshes and app updates.</span><span class="fr">Mettez une étoile aux outils que vous utilisez vraiment. Les favoris sont stockés sur l'appareil, ont leur propre section et survivent aux rafraîchissements du catalogue comme aux mises à jour de l'app.</span><span class="zh">為你真正會用的工具加上星號。收藏儲存在裝置上，有自己的專屬區塊，並能在目錄更新與 App 更新後保留下來。</span></p></div></li><li><h3><span class="en">Refresh &amp; offline cache</span><span class="fr">Rafraîchissement et cache hors ligne</span><span class="zh">更新與離線快取</span></h3><div><p><span class="en">Pull the latest catalogue straight from GitHub, cache it locally, and fall back to the version bundled with the app — so it keeps working with no network at all.</span><span class="fr">Récupérez le dernier catalogue directement depuis GitHub, mettez-le en cache localement, avec repli sur la version embarquée dans l'app — pour que tout continue de fonctionner sans aucun réseau.</span><span class="zh">直接從 GitHub 拉取最新目錄、快取在本機，並可退回 App 內建的版本——因此完全沒有網路也能繼續使用。</span></p></div></li><li><h3><span class="en">Bilingual &amp; theme-aware</span><span class="fr">Bilingue et sensible au thème</span><span class="zh">雙語並支援主題</span></h3><div><p><span class="en">English and French interface, following the system language or set explicitly, plus light, dark and system appearance modes.</span><span class="fr">Interface en anglais et en français, qui suit la langue du système ou se règle explicitement, plus les modes d'apparence clair, sombre et système.</span><span class="zh">英文與法文介面，可跟隨系統語言或手動指定，另有淺色、深色與跟隨系統三種外觀模式。</span></p></div></li><li><h3><span class="en">Sparkle auto-updates</span><span class="fr">Mises à jour automatiques Sparkle</span><span class="zh">Sparkle 自動更新</span></h3><div><p><span class="en">The macOS build ships with Sparkle, so signed and notarised releases install themselves once a build is published.</span><span class="fr">La version macOS embarque Sparkle : les releases signées et notariées s'installent d'elles-mêmes dès qu'une version est publiée.</span><span class="zh">macOS 版內建 Sparkle，因此只要一發布新版本，經簽章與公證的版本就會自行安裝。</span></p></div></li></ul></div></section>
+<section class="chapter" id="what"><div class="wrap g12"><div class="ch-head"><h2><span class="en">What it is</span><span class="fr">Ce que c'est</span><span class="zh">這是什麼</span></h2></div><div class="ch-body"><p><span class="en">OSINT — open source intelligence — is research carried out from publicly available sources. The tools that support it are scattered across hundreds of bookmark pages, gists and wikis. OSINT-index collects them into a single versioned catalogue and wraps it in a native app, so finding the right resource is a search box away rather than an afternoon of link-chasing. It is an index of public references for researchers, journalists and students: it points to tools, it does not run them.</span><span class="fr">L'OSINT — renseignement en sources ouvertes — est une recherche menée à partir de sources accessibles au public. Les outils qui la servent sont éparpillés sur des centaines de pages de favoris, de gists et de wikis. OSINT-index les rassemble dans un catalogue unique et versionné, enveloppé dans une app native : trouver la bonne ressource tient dans un champ de recherche plutôt que dans un après-midi à courir après des liens. C'est un index de références publiques pour chercheurs, journalistes et étudiants : il pointe vers des outils, il ne les exécute pas.</span><span class="zh">OSINT——開源情報——是根據公開可得的來源所進行的研究。支援這類研究的工具散落在數百個書籤頁、gist 與 wiki 之中。OSINT-index 把它們彙整成一份有版本管理的目錄，並包裝成原生 App，讓你只需一個搜尋框就能找到合適的資源，而不必花一整個下午追連結。這是一份為研究人員、記者與學生準備的公開參考索引：它指向工具，但不執行工具。</span></p><p><span class="en">People &amp; username search · Social media · Maps &amp; geolocation · Domains / IP / DNS · Cryptocurrency · Darknet · Public records · Search engines &amp; dorking · Image, video &amp; media · Flight &amp; maritime tracking · Threat intel · Training &amp; CTFs</span><span class="fr">Recherche de personnes et de pseudos · Réseaux sociaux · Cartes et géolocalisation · Domaines / IP / DNS · Cryptomonnaies · Darknet · Registres publics · Moteurs de recherche et dorking · Image, vidéo et médias · Suivi aérien et maritime · Threat intel · Formation et CTF</span><span class="zh">人物與使用者名稱搜尋 · 社群媒體 · 地圖與地理定位 · 網域／IP／DNS · 加密貨幣 · 暗網 · 公開紀錄 · 搜尋引擎與 dorking · 圖像、影片與媒體 · 航班與船舶追蹤 · 威脅情資 · 訓練與 CTF</span></p></div></div></section><section class="chapter" id="dataset"><div class="wrap g12"><div class="ch-head"><h2><span class="en">The dataset</span><span class="fr">Le jeu de données</span><span class="zh">資料集</span></h2></div><div class="ch-body"><p><span class="en">Everything the app displays comes from a single versioned file, <code>data/osint-tools.json</code>, living in the repository — readable, diffable, and reusable outside the app.</span><span class="fr">Tout ce que l'app affiche provient d'un unique fichier versionné, <code>data/osint-tools.json</code>, qui vit dans le dépôt — lisible, comparable et réutilisable hors de l'app.</span><span class="zh">App 顯示的一切都來自儲存庫中的單一版本化檔案 <code>data/osint-tools.json</code>——可閱讀、可比對差異，也能在 App 之外重複使用。</span></p><p><span class="en"><b>Origin.</b> The initial import came from <a href="https://github.com/osint4all/osint4all.github.io">osint4all</a>, published under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> (public domain, no attribution required — credited here for transparency). A later pass merged 266 further public links from <a href="https://start.me/p/DPYPMz/the-ultimate-osint-collection">The Ultimate OSINT Collection</a>; that page carries no stated licence, so those entries are referenced as links rather than republished as content. Full details in <a href="https://github.com/vincentlauriat/OSINT-index/blob/main/NOTICE.md">NOTICE.md</a>.</span><span class="fr"><b>Origine.</b> L'import initial vient d'<a href="https://github.com/osint4all/osint4all.github.io">osint4all</a>, publié sous <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> (domaine public, sans attribution requise — crédité ici par transparence). Un passage ultérieur a fusionné 266 liens publics supplémentaires issus de <a href="https://start.me/p/DPYPMz/the-ultimate-osint-collection">The Ultimate OSINT Collection</a> ; cette page n'indique aucune licence, ces entrées sont donc référencées comme liens plutôt que republiées comme contenu. Tous les détails dans <a href="https://github.com/vincentlauriat/OSINT-index/blob/main/NOTICE.md">NOTICE.md</a>.</span><span class="zh"><b>來源。</b>最初的匯入來自 <a href="https://github.com/osint4all/osint4all.github.io">osint4all</a>，以 <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> 發布（公有領域，無須標示出處——在此註明是為了透明）。之後又合併了來自 <a href="https://start.me/p/DPYPMz/the-ultimate-osint-collection">The Ultimate OSINT Collection</a> 的 266 個公開連結；該頁面未標示任何授權，因此這些項目僅以連結形式參照，而不轉載其內容。完整說明見 <a href="https://github.com/vincentlauriat/OSINT-index/blob/main/NOTICE.md">NOTICE.md</a>。</span></p><p><span class="en"><b>Maintenance.</b> Past the initial import the file is curated by hand in the repo — tools added, links corrected, dead entries removed. A dead-link checker (<code>Scripts/check_dead_links.py</code>) runs over the catalogue and reports what has rotted.</span><span class="fr"><b>Maintenance.</b> Après l'import initial, le fichier est entretenu à la main dans le dépôt — outils ajoutés, liens corrigés, entrées mortes supprimées. Un vérificateur de liens morts (<code>Scripts/check_dead_links.py</code>) parcourt le catalogue et signale ce qui a pourri.</span><span class="zh"><b>維護。</b>初次匯入之後，這個檔案在儲存庫中以人工整理——新增工具、修正連結、移除失效項目。失效連結檢查器（<code>Scripts/check_dead_links.py</code>）會掃過整份目錄，回報哪些已經失效。</span></p><p><span class="en"><b>Reuse.</b> The app code is MIT. The catalogue is a plain JSON document you can fetch, parse and build on without touching the app at all.</span><span class="fr"><b>Réutilisation.</b> Le code de l'app est sous MIT. Le catalogue est un simple document JSON que vous pouvez récupérer, analyser et exploiter sans jamais toucher à l'app.</span><span class="zh"><b>重複使用。</b>App 程式碼採 MIT 授權。目錄是一份純 JSON 文件，你可以直接取得、解析並以此為基礎開發，完全不必動到 App。</span></p></div></div></section><section class="chapter" id="build"><div class="wrap g12"><div class="ch-head"><h2><span class="en">Build from source</span><span class="fr">Compiler depuis les sources</span><span class="zh">從原始碼建置</span></h2><p><span class="en">Requires Xcode 15+ and <a href="https://github.com/yonaskolb/XcodeGen">XcodeGen</a>.</span><span class="fr">Nécessite Xcode 15+ et <a href="https://github.com/yonaskolb/XcodeGen">XcodeGen</a>.</span><span class="zh">需要 Xcode 15+ 與 <a href="https://github.com/yonaskolb/XcodeGen">XcodeGen</a>。</span></p></div><div class="ch-body"><pre><code>brew install xcodegen
 git clone https://github.com/vincentlauriat/OSINT-index.git
 cd OSINT-index
-xcodegen generate            <span class="cmt"># generates OSINTIndex.xcodeproj</span>
-open OSINTIndex.xcodeproj    <span class="cmt"># macOS: scheme OSINTIndex — iOS: scheme OSINTIndexiOS</span></code></pre>
-  <p class="lede">One SwiftUI codebase drives both platforms: models and services are shared, only the
-  platform-specific pieces (Sparkle on macOS, the navigation chrome) differ. See
-  <a href="https://github.com/vincentlauriat/OSINT-index/blob/main/ARCHITECTURE_EN.md">ARCHITECTURE_EN.md</a>
-  for the layer breakdown.</p>
-  <p class="note">No binary release has been published yet, and the iOS app is not on the App Store —
-  building from source is currently the way to run it. The macOS release pipeline (signed, notarised DMG
-  with a Sparkle appcast) is in place and waiting on the first tagged version.</p>
-</section>
-
-<footer>
-  <p>© Vincent Lauriat · <a href="https://github.com/vincentlauriat/OSINT-index">github.com/vincentlauriat/OSINT-index</a> · <a href="https://vincentlauriat.github.io/">more apps</a></p>
-</footer>
-
+xcodegen generate            # generates OSINTIndex.xcodeproj
+open OSINTIndex.xcodeproj    # macOS: scheme OSINTIndex — iOS: scheme OSINTIndexiOS</code></pre><p><span class="en">One SwiftUI codebase drives both platforms: models and services are shared, only the platform-specific pieces (Sparkle on macOS, the navigation chrome) differ. See <a href="https://github.com/vincentlauriat/OSINT-index/blob/main/ARCHITECTURE_EN.md">ARCHITECTURE_EN.md</a> for the layer breakdown.</span><span class="fr">Une seule base de code SwiftUI pilote les deux plateformes : modèles et services sont partagés, seules les pièces propres à chaque plateforme (Sparkle sur macOS, l'habillage de navigation) diffèrent. Voir <a href="https://github.com/vincentlauriat/OSINT-index/blob/main/ARCHITECTURE_EN.md">ARCHITECTURE_EN.md</a> pour le découpage en couches.</span><span class="zh">同一套 SwiftUI 程式碼驅動兩個平台：模型與服務共用，只有平台專屬的部分（macOS 上的 Sparkle、導覽外框）不同。分層說明請見 <a href="https://github.com/vincentlauriat/OSINT-index/blob/main/ARCHITECTURE_EN.md">ARCHITECTURE_EN.md</a>。</span></p><p><span class="en">No binary release has been published yet, and the iOS app is not on the App Store — building from source is currently the way to run it. The macOS release pipeline (signed, notarised DMG with a Sparkle appcast) is in place and waiting on the first tagged version.</span><span class="fr">Aucune release binaire n'a encore été publiée, et l'app iOS n'est pas sur l'App Store — compiler depuis les sources est pour l'instant le moyen de la faire tourner. Le pipeline de release macOS (DMG signé et notarié avec un appcast Sparkle) est en place et attend la première version taguée.</span><span class="zh">目前尚未發布任何二進位版本，iOS App 也不在 App Store 上——現階段要執行它，就得從原始碼建置。macOS 的發行流程（經簽章與公證的 DMG，搭配 Sparkle appcast）已經就緒，正等待第一個標記版本。</span></p></div></div></section>
+<section class="close"><div class="wrap g12"><h2><span class="en">Browse, search and keep</span><span class="fr">Parcourir, rechercher et garder</span><span class="zh">瀏覽、搜尋與保存</span></h2><div class="c-r"><p><span class="en">Free &amp; open source (MIT) · macOS 14+ and iOS/iPadOS 17+ · English &amp; French UI · open dataset</span><span class="fr">Gratuit et open source (MIT) · macOS 14+ et iOS/iPadOS 17+ · interface anglaise et française · jeu de données ouvert</span><span class="zh">免費開源（MIT）· macOS 14+ 與 iOS/iPadOS 17+ · 英文與法文介面 · 開放資料集</span></p><div class="acts"><a class="btn" href="https://github.com/vincentlauriat/OSINT-index"><span class="en">View on GitHub</span><span class="fr">Voir sur GitHub</span><span class="zh">在 GitHub 上檢視</span></a><a class="lnk" href="#build"><span class="en">Build from source</span><span class="fr">Compiler depuis les sources</span><span class="zh">從原始碼建置</span><svg class="arw" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div></div></div></section>
+</main>
+<footer class="colophon"><div class="wrap g12"><div class="c1"><h2>OSINT-index</h2><p><span class="en">Work no.</span><span class="fr">Réalisation n°</span><span class="zh">作品編號</span> <span class="num">21</span> <span class="en">in the works of Vincent Lauriat</span><span class="fr">dans les réalisations de Vincent Lauriat</span><span class="zh">收錄於 Vincent Lauriat 作品集</span>.</p><p><a href="https://vincentlauriat.github.io/#w21"><span class="en">All works</span><span class="fr">Toutes les réalisations</span><span class="zh">全部作品</span></a></p></div><div class="c2"><h2><span class="en">Source</span><span class="fr">Source</span><span class="zh">原始碼</span></h2><p><a href="https://github.com/vincentlauriat/OSINT-index">github.com/vincentlauriat/OSINT-index</a></p><p><span class="en">MIT License</span><span class="fr">Licence MIT</span><span class="zh">MIT 授權</span> · © 2026 Vincent Lauriat</p></div><div class="c3"><h2><span class="en">About this page</span><span class="fr">À propos de cette page</span><span class="zh">關於本頁</span></h2><p><span class="en">Set in Schibsted Grotesk, on the grid of the book it belongs to.</span><span class="fr">Composée en Schibsted Grotesk, sur la grille du livre auquel elle appartient.</span><span class="zh">以 Schibsted Grotesk 排版，沿用其所屬作品集的網格。</span></p></div></div></footer>
+<script src="/assets/monograph/v1/monograph.js"></script>
 </body>
 </html>
